@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/triplesort
+END
+.depend
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/triplesort/.depend
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/triplesort/Makefile
+END
+triple.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/triplesort/triple.c
+END
+triple.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/triplesort/triple.h
+END
+triplesort.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/triplesort/triplesort.c
+END

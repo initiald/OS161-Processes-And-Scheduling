@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/test
+END
+arraytest.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/test/arraytest.c
+END
+synchtest.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/test/synchtest.c
+END
+waittest.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/test/waittest.c
+END
+nettest.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/test/nettest.c
+END
+malloctest.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/test/malloctest.c
+END
+threadtest.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/test/threadtest.c
+END
+fstest.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/test/fstest.c
+END
+tt3.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/test/tt3.c
+END
+bitmaptest.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/test/bitmaptest.c
+END

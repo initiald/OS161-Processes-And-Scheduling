@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/lib/libc/unix
+END
+getcwd.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/lib/libc/unix/getcwd.c
+END
+__assert.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/lib/libc/unix/__assert.c
+END
+errno.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/lib/libc/unix/errno.c
+END
+err.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/lib/libc/unix/err.c
+END

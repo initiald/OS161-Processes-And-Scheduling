@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/triplehuge
+END
+.depend
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/triplehuge/.depend
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/triplehuge/Makefile
+END
+triple.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/triplehuge/triple.c
+END
+triple.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/triplehuge/triple.h
+END
+triplehuge.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/triplehuge/triplehuge.c
+END

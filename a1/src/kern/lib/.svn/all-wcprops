@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/lib
+END
+array.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/lib/array.c
+END
+misc.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/lib/misc.c
+END
+bitmap.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/lib/bitmap.c
+END
+bswap.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/lib/bswap.c
+END
+uio.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/lib/uio.c
+END
+kgets.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/lib/kgets.c
+END
+kprintf.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/lib/kprintf.c
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/include/kern/mips
+END
+signal.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/include/kern/mips/signal.h
+END
+endian.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/include/kern/mips/endian.h
+END
+machine
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/include/kern/mips/machine
+END
+regdefs.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/include/kern/mips/regdefs.h
+END
+mips
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/include/kern/mips/mips
+END
+setjmp.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/include/kern/mips/setjmp.h
+END
+types.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/include/kern/mips/types.h
+END

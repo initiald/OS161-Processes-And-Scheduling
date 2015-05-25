@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/sbin/halt
+END
+halt.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/sbin/halt/halt.c
+END
+.depend
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/sbin/halt/.depend
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/sbin/halt/Makefile
+END

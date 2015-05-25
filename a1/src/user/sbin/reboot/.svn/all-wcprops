@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/sbin/reboot
+END
+reboot.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/sbin/reboot/reboot.c
+END
+.depend
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/sbin/reboot/.depend
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/sbin/reboot/Makefile
+END

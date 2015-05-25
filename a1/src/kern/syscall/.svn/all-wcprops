@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/syscall
+END
+loadelf.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/syscall/loadelf.c
+END
+time_syscalls.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/syscall/time_syscalls.c
+END
+file_syscalls.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/syscall/file_syscalls.c
+END
+runprogram.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/syscall/runprogram.c
+END
+proc_syscalls.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/syscall/proc_syscalls.c
+END

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1
+END
+autoconf.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/autoconf.c
+END
+kernel
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/kernel
+END
+opt-dumbvm.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/opt-dumbvm.h
+END
+opt-synchprobs.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/opt-synchprobs.h
+END
+vers.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/vers.c
+END
+autoconf.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/autoconf.h
+END
+version
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/version
+END
+opt-noasserts.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/opt-noasserts.h
+END
+files.mk
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/files.mk
+END
+opt-net.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/opt-net.h
+END
+.depend
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/.depend
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/Makefile
+END

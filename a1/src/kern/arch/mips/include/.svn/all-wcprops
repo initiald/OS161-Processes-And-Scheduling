@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/arch/mips/include
+END
+specialreg.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/arch/mips/include/specialreg.h
+END
+tlb.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/arch/mips/include/tlb.h
+END
+trapframe.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/arch/mips/include/trapframe.h
+END
+current.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/arch/mips/include/current.h
+END
+spinlock.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/arch/mips/include/spinlock.h
+END
+vm.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/arch/mips/include/vm.h
+END
+types.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/arch/mips/include/types.h
+END
+elf.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/arch/mips/include/elf.h
+END
+thread.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/arch/mips/include/thread.h
+END

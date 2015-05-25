@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/bin/sync
+END
+.depend
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/bin/sync/.depend
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/bin/sync/Makefile
+END
+sync.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/bin/sync/sync.c
+END
