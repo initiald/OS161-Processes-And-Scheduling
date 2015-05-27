@@ -1,0 +1,63 @@
+
+
+        1.What happens to a thread when it exits (i.e., calls thread_exit() )? What about when it sleeps?
+			When this thread_exit() is called, it will clean up all addresses and memory.
+			
+        2.What function(s) handle(s) a context switch?
+			The function that handles the context switch is the thread_switch() function.
+			This consists of calls to:
+				splx
+				thread_checkstack
+				spinlock_acquire
+				threadlist_isempty
+				spinlock_release
+				thread_make_runnable
+				threadlist_addtail
+				threadlist_remhead
+				switchframe_switch
+				as_activate
+				exorcise
+				
+        3.How many thread states are there? What are they?
+			There are 4 thread states which consist of:
+				S_RUN, S_READY, S_SLEEP, S_ZOMBIE
+		
+        4.What does it mean to turn interrupts off? How is this accomplished? Why is it important to turn off interrupts in the thread subsystem code?
+			
+		
+        5.What happens when a thread wakes up another thread? How does a sleeping thread get to run again?
+		
+        6.Semaphores are implemented using spinlocks. Where are spinlocks implemented? And what does it mean to get the data for a spinlock?
+			Spinlock is implemented in kern/thread/spinlock.c and spinlock.h . 
+			What it means to get the data for a spinlock is to check if the lock is being in use.
+		
+        7.Are OS/161 semaphores "strong" or "weak"?
+			They are strong because its FIFO.
+		
+        8.Why does the lock API in OS/161 provide lock_do_i_hold(), but not lock_get_holder() ?
+			In the implementation of spinlock, there is a splk_holder which has this value.
+		
+        9.What are the ELF magic numbers?
+			The ELF magic numbers 0x7felf.	
+				ELFMAG0		0x7f
+				ELFMAG1		'E'
+				ELFMAG2		'L'
+				ELFMAG3		'F'
+		
+        10.What is the difference between UIO_USERISPACE and UIO_USERSPACE? When should one use UIO_SYSSPACE instead?
+			UIO_USERISPACE is user process code and UIO_USERSPACE is user process data. 
+			We use UIO_SYSSPACE when uio_spae is set to NULL, which is then move to buffer to transfer data.
+			
+        11.Why can the struct uio that is used to read in a segment be allocated on the stack in load_segment() (i.e., where does the memory read actually go)?
+			The memory read acutally goes in uio-resid, which is the buffer that transfers data that is being read from load_segment().
+			
+        12.In runprogram(), why is it important to call vfs_close() before going to usermode?
+			It is important to call vfs_close() before going to usermode because it will clear the memory so it would not interfer with other processes.
+		
+        13.What function forces the processor to switch into usermode? Is this function machine dependent?
+			The function that does the switching is mips_usermode(). 
+			No, this function is not machine dependent because of its implementation.
+		
+        14.The mips_trap function handles all exceptions. Is it possible to determine whether the exception being handled was triggered during user execution or kernel execution?
+			Yes, it is possible to determine if it happens in the kernel or user. In traps.c there is variable isKern.
+
