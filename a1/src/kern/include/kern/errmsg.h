@@ -104,6 +104,7 @@ const char *const sys_errlist[] = {
 	"Connection reset by peer",   /* ECONNRESET */
 	"Message too large",          /* EMSGSIZE */
 	"Threads operation not supported",/* ENOTSUP */
+	"Target refers to calling a thread", /* EDEADLK */
 };
 
 /*
