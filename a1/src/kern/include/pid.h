@@ -70,5 +70,18 @@ void pid_exit(int status, bool dodetach);
  */
 int pid_join(pid_t targetpid, int *status, int flags);
 
+//additional monitoring tools
+
+/* set flags */
+int pid_set_flag(pid_t pid, int sig);
+
+/* get flag */
+int pid_get_flag(pid_t pid);
+
+/* is this a valid pid */
+int pid_valid(pid_t pid);
+
+/* Check whether if it there a parent child relationship */
+int pid_is_parent_child(pid_t pid_p, pid_t pid_c);
 
 #endif /* _PID_H_ */
