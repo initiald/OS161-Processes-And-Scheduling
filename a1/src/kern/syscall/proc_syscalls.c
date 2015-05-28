@@ -11,6 +11,8 @@
 #include <pid.h>
 #include <machine/trapframe.h>
 #include <syscall.h>
+#include <kern/wait.h>
+#include <synch.h>
 
 /*
  * sys_fork
@@ -49,20 +51,61 @@ sys_fork(struct trapframe *tf, pid_t *retval)
 
 /*
  * sys_getpid
- * Placeholder to remind you to implement this.
  */
-
+void
+sys_getpid(pid_t *retval)
+{
+    // get current thread pid
+    *retval=curthread->t_pid;
+}
 
 /*
  * sys_waitpid
- * Placeholder comment to remind you to implement this.
  */
-
+int
+sys_waitpid(pid_t pid, int *status, int opt, pid_t *retval)
+{
+    // return if pid does not exist
+    if (pid_valid(pid)!=0) {
+        return ESRCH;
+    }
+    // return if status pointer is invalid
+    if (!status) {
+        return EFAULT;
+    }
+    // return if opt argument is invalid
+    if (opt!=0 && opt!=WNOHANG) {
+        return EINVAL;
+    }
+    // return if pid is child of current thread
+    if (!pid_parent(curthread->t_pid, pid)) {
+        return ECHILD;
+    }
+    // wait for exit status of thread in status
+	*retval = pid_join(pid, status, opt);
+	// return error
+	if (*retval<0){
+		return -(*retval);
+	}
+    // success
+    return 0;
+}
 
 /*
  * sys_kill
- * Placeholder comment to remind you to implement this.
  */
+int
+sys_kill(pid_t pid, int sig)
+{
+    // Validate signal sig
+	if (sig<0 || sig>32) {
+		return EINVAL;
+	}
 
-
+	int err = pid_set_flag(pid, sig);
+	if (err) {
+		return err;
+	}
+	return 0;
+}
 

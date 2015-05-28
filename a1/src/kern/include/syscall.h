@@ -70,6 +70,10 @@ int sys_write(int fd, userptr_t buf, size_t size, int *retval);
 /*
  * ASST1 - Prototypes for new bootstrap/shutdown functions needed by syscalls
  */
+void sys_getpid(pid_t *retval);
+int sys_waitpid(pid_t pid, int *status, int opt, pid_t *retval);
+int sys_kill(pid_t pid, int sig);
+
 void dumb_consoleIO_bootstrap(void);
 
 #endif /* _SYSCALL_H_ */

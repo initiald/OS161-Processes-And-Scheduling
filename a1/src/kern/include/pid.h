@@ -70,18 +70,23 @@ void pid_exit(int status, bool dodetach);
  */
 int pid_join(pid_t targetpid, int *status, int flags);
 
-//additional monitoring tools
-
-/* set flags */
+/*
+ * returns 0 if flag is set
+ */
 int pid_set_flag(pid_t pid, int sig);
 
-/* get flag */
+/*
+ * returns flag of pid
+ */
 int pid_get_flag(pid_t pid);
 
-/* is this a valid pid */
+/*
+ * returns 0 if pid valid, otherwise ERRNO
+ */
 int pid_valid(pid_t pid);
 
-/* Check whether if it there a parent child relationship */
-int pid_is_parent_child(pid_t pid_p, pid_t pid_c);
-
+/*
+ * returns 1 if pid_p is parent of pid_c, otherwise return 0
+ */
+int pid_parent(pid_t pid_p, pid_t pid_c);
 #endif /* _PID_H_ */

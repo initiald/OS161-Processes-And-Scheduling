@@ -39,6 +39,8 @@
 #include <vm.h>
 #include <mainbus.h>
 #include <syscall.h>
+#include <synch.h>
+#include <pid.h>
 
 
 /* in exception.S */
@@ -127,7 +129,8 @@ mips_trap(struct trapframe *tf)
 {
 	uint32_t code;
 	bool isutlb, iskern;
-	int spl;
+	int spl, pid_flag;
+	struct lock *cv_lock;
 
 	/* The trap frame is supposed to be 37 registers long. */
 	KASSERT(sizeof(struct trapframe)==(37*4));
@@ -146,6 +149,36 @@ mips_trap(struct trapframe *tf)
 		KASSERT((vaddr_t)tf > (vaddr_t)curthread->t_stack);
 		KASSERT((vaddr_t)tf < (vaddr_t)(curthread->t_stack
 						+ STACK_SIZE));
+	}
+
+	/*
+	 * Check flag before returning to userspace
+	 */
+	cv_lock = lock_create("Creating Lock");
+	KASSERT(cv_lock != NULL);
+	pid_flag = pid_get_flag(curthread->t_pid);
+	if (pid_flag) {
+		switch (pid_flag) {
+			// Terminate the process
+			case SIGHUP:
+			case SIGINT:
+			case SIGKILL:
+			case SIGTERM:
+				thread_exit(0);
+				break;
+			// Stop or continue
+			case SIGSTOP:
+				//cv_wait(curthread->pi_cv_stop, cv_lock);
+				lock_release(cv_lock);
+				break;
+			case SIGCONT:
+				//cv_broadcast(curthread->pi_cv_stop, cv_lock);
+				break;
+			// Ignore
+			case SIGWINCH:
+			case SIGINFO:
+				break;
+		}
 	}
 
 	/* Interrupt? Call the interrupt handler and return. */
