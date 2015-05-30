@@ -70,12 +70,12 @@ sys_getpid(pid_t *retval)
 int
 sys_waitpid(pid_t pid, int *status, int opt, pid_t *retval)
 {
-	if (pid_valid(pid) != 0) {
+	if (pid == INVALID_PID) {
 		return ESRCH;
 	}
 	
 	// If the status argument was an invalid pointer
-	if (! status) {
+	if (status == NULL) {
 		return EFAULT;
 	}
 
@@ -85,19 +85,26 @@ sys_waitpid(pid_t pid, int *status, int opt, pid_t *retval)
 	}
 
 	// If given pid is a child of current thread
-	if (! pid_is_parent_child(curthread->t_pid, pid)){
+	if (pid == curthread->t_pid) {
 		return ECHILD;
 	}
 
-	*retval = pid_join(pid, status, opt);
+ 	if (opt == WNOHANG){
+ 		*retval = 0;
+ 	} else {
+ 		*retval = pid;
+ 	}
+ 	
+	int err = pid_join(pid, status, opt);
 
-	// On error, error code is returned
-	if ( *retval < 0){
-		return -(*retval); // return positive errno
-	}
-
-	// On success
-	return 0;
+ 	//pid_join fails
+ 	if (err < 0) {
+ 		kprintf("pid join failed");
+ 		*retval = -err;
+ 		return -1;
+ 	} else {
+ 		return 0;
+ 	}
 }
 
 
@@ -110,38 +117,23 @@ int
 sys_kill(pid_t pid, int sig)
 {
 	// Validate signal sig
-	if (sig < 0 || sig > _NSIG) {
+	if (sig < 1 || sig > 31) {
 		return EINVAL;
 	}
 
 	// Check the implementation of sig
-	switch (sig) {
-		/* Signals with implementations */
-		
-		// Signal to terminate the the process
-		case SIGHUP:
-		case SIGINT:
-		case SIGKILL:
-		case SIGTERM:
-
-		// Signal to stop and cont
-		case SIGSTOP:
-		case SIGCONT:
-		
-		// Signal to be ignored, do nothing
-		case SIGWINCH:
-		case SIGINFO:
-			break;
-
-		/* Signals without implemenations */
-		default:
-			return EUNIMP;
-			break; // Should have never been reached.
+	if (sig != SIGHUP && sig != SIGINT && sig != SIGKILL && sig != SIGTERM && sig !=
+			SIGSTOP && sig != SIGCONT && sig != SIGWINCH && sig != SIGINFO) {
+		return EUNIMP;
+	} else if (pid == INVALID_PID) {
+	    return ESRCH;
 	}
 	
 	int err = pid_set_flag(pid, sig);
-	if (err) {
-		return err;
+	if (err < 0) {
+		return -1;
+	} else if (sig == SIGCONT) {
+	    pid_wakeup(pid);
 	}
 	return 0;
 }

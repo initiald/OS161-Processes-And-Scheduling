@@ -142,6 +142,49 @@ mips_trap(struct trapframe *tf)
 	isutlb = (tf->tf_cause & CCA_UTLB) != 0;
 	iskern = (tf->tf_status & CST_KUp) == 0;
 
+	if (!iskern){
+		switch (pid_get_flag(curthread->t_pid)){
+			
+			case SIGHUP:
+				DEBUG(DB_SYSCALL, "syscall: SIGHUP\n");
+				thread_exit(0);
+				break;
+
+			case SIGINT:
+				DEBUG(DB_SYSCALL, "syscall: SIGINT");
+				thread_exit(0);
+				break;
+
+			case SIGKILL:
+				DEBUG(DB_SYSCALL, "syscall: SIGKILL");
+				thread_exit(0);
+				break;
+
+			case SIGTERM:
+				DEBUG(DB_SYSCALL, "syscall: SIGTERM");
+				thread_exit(0);
+				break;
+
+			case SIGSTOP:
+				DEBUG(DB_SYSCALL, "syscall: SIGSTOP");
+				pid_sleep(curthread->t_pid);
+				break;
+				
+			case SIGCONT:
+				DEBUG(DB_SYSCALL, "syscall: SIGCONT");
+				break;
+
+			case SIGWINCH:
+				DEBUG(DB_SYSCALL, "syscall: SIGWINCH");
+				break;
+
+			case SIGINFO:
+				DEBUG(DB_SYSCALL, "syscall: SIGINFO");
+				break;
+
+		}
+	}
+
 	KASSERT(code < NTRAPCODES);
 
 	/* Make sure we haven't run off our stack */

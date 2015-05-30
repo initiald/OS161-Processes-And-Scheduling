@@ -575,6 +575,9 @@ thread_fork(const char *name,
 	 */
 	if (ret != NULL) {
 		*ret = newthread->t_pid;
+	} else {
+        // must detach thread because parent will forget the pid if not stored
+		pid_detach(newthread->t_pid);
 	}
 
 	return 0;
@@ -831,9 +834,16 @@ void
 thread_exit(int exitcode)
 {
 	struct thread *cur;
-        (void)exitcode;  // suppress warning until code gets written
-
+    //(void)exitcode;  // suppress warning until code gets written
 	cur = curthread;
+
+	// check if pid is assigned to current thread
+	if (cur->t_pid) {
+		// since user mode has their own address space
+		// we detach if address space is not NULL
+		bool detach = (cur->t_addrspace != NULL);
+		pid_exit(exitcode, detach);
+	}
 
 	/* VFS fields */
 	if (cur->t_cwd) {
