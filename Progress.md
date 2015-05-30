@@ -3,9 +3,8 @@ The test 'p testbin/argtest 123 abc' returns the expected output as per
 the discussion board post. All that is required is pushing enter when the  
 test is run to exit.  
   
-Task 2: In Progress  
-Implementation will not allow test to finish. Needs debugging and testing.  
-Test will start but not finish. (SSH issue?)
+Task 2: Complete  
+The test wt returns as expected. I will push soon to repo.  
 
 Task 3: In Progress  
 Implementation will not allow test to finish. Also on lines 170-175 of  
