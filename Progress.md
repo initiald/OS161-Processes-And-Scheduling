@@ -7,4 +7,5 @@ Task 2: Complete
 The test wt returns as expected. I will push soon to repo.  
 
 Task 3: Complete  
-The test 'p testbin/killtest' returns as expected. I will push soon to repo.
+The test 'p testbin/killtest' returns as expected. I will push soon to repo.  
+Sometimes failes due to stray interrupt. Need fixing.
