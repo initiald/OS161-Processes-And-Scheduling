@@ -834,7 +834,6 @@ void
 thread_exit(int exitcode)
 {
 	struct thread *cur;
-    //(void)exitcode;  // suppress warning until code gets written
 	cur = curthread;
 
 	// check if pid is assigned to current thread

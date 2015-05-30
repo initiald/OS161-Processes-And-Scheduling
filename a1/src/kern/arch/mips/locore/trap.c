@@ -129,8 +129,7 @@ mips_trap(struct trapframe *tf)
 {
 	uint32_t code;
 	bool isutlb, iskern;
-	int spl/*, pid_flag;
-	struct lock *cv_lock*/;
+	int spl;
 
 	/* The trap frame is supposed to be 37 registers long. */
 	KASSERT(sizeof(struct trapframe)==(37*4));
@@ -144,44 +143,27 @@ mips_trap(struct trapframe *tf)
 
 	if (!iskern){
 		switch (pid_get_flag(curthread->t_pid)){
-			
 			case SIGHUP:
-				DEBUG(DB_SYSCALL, "syscall: SIGHUP\n");
 				thread_exit(0);
 				break;
-
 			case SIGINT:
-				DEBUG(DB_SYSCALL, "syscall: SIGINT");
 				thread_exit(0);
 				break;
-
 			case SIGKILL:
-				DEBUG(DB_SYSCALL, "syscall: SIGKILL");
 				thread_exit(0);
 				break;
-
 			case SIGTERM:
-				DEBUG(DB_SYSCALL, "syscall: SIGTERM");
 				thread_exit(0);
 				break;
-
 			case SIGSTOP:
-				DEBUG(DB_SYSCALL, "syscall: SIGSTOP");
 				pid_sleep(curthread->t_pid);
 				break;
-				
 			case SIGCONT:
-				DEBUG(DB_SYSCALL, "syscall: SIGCONT");
 				break;
-
 			case SIGWINCH:
-				DEBUG(DB_SYSCALL, "syscall: SIGWINCH");
 				break;
-
 			case SIGINFO:
-				DEBUG(DB_SYSCALL, "syscall: SIGINFO");
 				break;
-
 		}
 	}
 
@@ -193,48 +175,6 @@ mips_trap(struct trapframe *tf)
 		KASSERT((vaddr_t)tf < (vaddr_t)(curthread->t_stack
 						+ STACK_SIZE));
 	}
-
-	/*
-	 * Check thread flag before returning to userspace
-	 */
-	/*cv_lock = lock_create("lock for signal");
-	KASSERT(cv_lock != NULL);
-
-	pid_flag = pid_get_flag(curthread->t_pid);
-	if (pid_flag) {
-		switch (pid_flag) {
-			// Signal to terminate the process
-			case SIGHUP:
-			case SIGINT:
-			case SIGKILL:
-			case SIGTERM:
-				thread_exit(0);
-				break;
-
-			// Signal to stop and cont
-			case SIGSTOP:
-				//cv_wait(pi_cv_stop, cv_lock);
-				lock_release(cv_lock);
-				break;
-			case SIGCONT:
-				//cv_broadcast(pi_cv_stop, cv_lock);
-				break;
-
-			// Signal to be ignored, do nothing
-			case SIGWINCH:
-			case SIGINFO:
-				break;
-
-			// Should never reach here since errs are handled when SYS_kill
-			// is received
-			default:
-				pid_flag = 1;
-				kprintf("Signal flag %d cannot be handled in kernel mode\n",
-				pid_flag);
-				KASSERT(0 == 1);
-			    break;
-		}
-	}*/
 
 	/* Interrupt? Call the interrupt handler and return. */
 	if (code == EX_IRQ) {

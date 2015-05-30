@@ -99,7 +99,6 @@ sys_waitpid(pid_t pid, int *status, int opt, pid_t *retval)
 
  	//pid_join fails
  	if (err < 0) {
- 		kprintf("pid join failed");
  		*retval = -err;
  		return -1;
  	} else {
