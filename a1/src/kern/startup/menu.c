@@ -141,9 +141,9 @@ cmd_progthread(void *ptr, unsigned long nargs)
 	strcpy(progname, args[0]);
 	strcpy(progname2,args[0]); /* demke: make extra copy for runprogram */
 
-	result = runprogram(progname2, args, nargs);
+	result = runprogram(progname2, nargs, args);
 	free_args(nargs, args);
-	
+
 	if (result) {
 		kprintf("Running program %s failed: %s\n", progname,
 			strerror(result));
@@ -176,7 +176,7 @@ common_prog(int nargs, char **args)
 	char **args_copy;
 	pid_t val; //the value of the pid
 	volatile bool last; //check last character
-	
+
 #if OPT_SYNCHPROBS
 	kprintf("Warning: this probably won't work with a "
 		"synchronization-problems kernel.\n");
@@ -189,7 +189,7 @@ common_prog(int nargs, char **args)
 	if (!args_copy) {
 		return ENOMEM;
 	}
-	
+
 	/*check if the last character or argument is "&" meaning
 	 it can be detatched. */
 	if (*args_copy[nargs-1] == '&'){ //& is at the end of the address
@@ -198,26 +198,25 @@ common_prog(int nargs, char **args)
 	}
 
 	/* demke: and now call thread_fork with the copy */
-	
+
 	result = thread_fork(args_copy[0] /* thread name */,
 			cmd_progthread /* thread function */,
 			args_copy /* thread arg */, nargs /* thread arg */,
 			&val);
-			
+
 	if (result) {
 		kprintf("thread_fork failed: %s\n", strerror(result));
 		/* demke: need to free copy of args if fork fails */
 		free_args(nargs, args_copy);
 		return result;
 	}
-	
+
 	if (last == true) {
 		pid_detach(val); //detach it
 	}
 	else{
 		pid_join(val, NULL, 0); //initial join
 	}
-
 
 	return 0;
 }

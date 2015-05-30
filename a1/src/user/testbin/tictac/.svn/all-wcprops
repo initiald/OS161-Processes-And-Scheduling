@@ -3,6 +3,12 @@ svn:wc:ra_dav:version-url
 V 59
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/tictac
 END
+tictac.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/tictac/tictac.c
+END
 .depend
 K 25
 svn:wc:ra_dav:version-url
@@ -14,10 +20,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 68
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/tictac/Makefile
-END
-tictac.c
-K 25
-svn:wc:ra_dav:version-url
-V 68
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/tictac/tictac.c
 END

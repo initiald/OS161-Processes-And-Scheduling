@@ -3,18 +3,6 @@ svn:wc:ra_dav:version-url
 V 56
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/generic
 END
-beep.h
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/generic/beep.h
-END
-random.c
-K 25
-svn:wc:ra_dav:version-url
-V 65
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/generic/random.c
-END
 rtclock.c
 K 25
 svn:wc:ra_dav:version-url
@@ -50,4 +38,16 @@ K 25
 svn:wc:ra_dav:version-url
 V 63
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/generic/beep.c
+END
+beep.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/generic/beep.h
+END
+random.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/generic/random.c
 END

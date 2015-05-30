@@ -3,6 +3,30 @@ svn:wc:ra_dav:version-url
 V 51
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall
 END
+write.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/write.html
+END
+reboot.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/reboot.html
+END
+ftruncate.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/ftruncate.html
+END
+__time.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/__time.html
+END
 sbrk.html
 K 25
 svn:wc:ra_dav:version-url
@@ -87,23 +111,23 @@ svn:wc:ra_dav:version-url
 V 62
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/lstat.html
 END
-readlink.html
-K 25
-svn:wc:ra_dav:version-url
-V 65
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/readlink.html
-END
 chdir.html
 K 25
 svn:wc:ra_dav:version-url
 V 62
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/chdir.html
 END
-remove.html
+readlink.html
 K 25
 svn:wc:ra_dav:version-url
-V 63
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/remove.html
+V 65
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/readlink.html
+END
+link.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/link.html
 END
 pipe.html
 K 25
@@ -111,11 +135,11 @@ svn:wc:ra_dav:version-url
 V 61
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/pipe.html
 END
-link.html
+remove.html
 K 25
 svn:wc:ra_dav:version-url
-V 61
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/link.html
+V 63
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/remove.html
 END
 getdirentry.html
 K 25
@@ -165,17 +189,17 @@ svn:wc:ra_dav:version-url
 V 62
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/_exit.html
 END
-stat.html
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/stat.html
-END
 read.html
 K 25
 svn:wc:ra_dav:version-url
 V 61
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/read.html
+END
+stat.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/stat.html
 END
 sync.html
 K 25
@@ -188,28 +212,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 64
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/symlink.html
-END
-reboot.html
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/reboot.html
-END
-write.html
-K 25
-svn:wc:ra_dav:version-url
-V 62
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/write.html
-END
-ftruncate.html
-K 25
-svn:wc:ra_dav:version-url
-V 66
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/ftruncate.html
-END
-__time.html
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/syscall/__time.html
 END

@@ -189,17 +189,17 @@ svn:wc:ra_dav:version-url
 V 78
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/testbin/matmult.html
 END
-farm.html
-K 25
-svn:wc:ra_dav:version-url
-V 75
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/testbin/farm.html
-END
 kitchen.html
 K 25
 svn:wc:ra_dav:version-url
 V 78
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/testbin/kitchen.html
+END
+farm.html
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/testbin/farm.html
 END
 sort.html
 K 25
@@ -207,15 +207,15 @@ svn:wc:ra_dav:version-url
 V 75
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/testbin/sort.html
 END
-add.html
-K 25
-svn:wc:ra_dav:version-url
-V 74
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/testbin/add.html
-END
 huge.html
 K 25
 svn:wc:ra_dav:version-url
 V 75
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/testbin/huge.html
+END
+add.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/testbin/add.html
 END

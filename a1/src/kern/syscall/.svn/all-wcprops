@@ -3,6 +3,12 @@ svn:wc:ra_dav:version-url
 V 52
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/syscall
 END
+proc_syscalls.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/syscall/proc_syscalls.c
+END
 loadelf.c
 K 25
 svn:wc:ra_dav:version-url
@@ -26,10 +32,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 65
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/syscall/runprogram.c
-END
-proc_syscalls.c
-K 25
-svn:wc:ra_dav:version-url
-V 68
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/syscall/proc_syscalls.c
 END

@@ -3,15 +3,15 @@ svn:wc:ra_dav:version-url
 V 67
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/user/testbin/randcall
 END
-randcall
-K 25
-svn:wc:ra_dav:version-url
-V 76
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/user/testbin/randcall/randcall
-END
 calls.c
 K 25
 svn:wc:ra_dav:version-url
 V 75
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/user/testbin/randcall/calls.c
+END
+randcall
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/user/testbin/randcall/randcall
 END

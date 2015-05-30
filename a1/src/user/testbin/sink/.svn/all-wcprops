@@ -3,6 +3,12 @@ svn:wc:ra_dav:version-url
 V 57
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/sink
 END
+sink.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/sink/sink.c
+END
 .depend
 K 25
 svn:wc:ra_dav:version-url
@@ -14,10 +20,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 66
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/sink/Makefile
-END
-sink.c
-K 25
-svn:wc:ra_dav:version-url
-V 64
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/sink/sink.c
 END

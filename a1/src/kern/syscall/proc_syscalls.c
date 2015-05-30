@@ -12,7 +12,8 @@
 #include <machine/trapframe.h>
 #include <syscall.h>
 #include <kern/wait.h>
-#include <synch.h>
+#include <signal.h>
+
 
 /*
  * sys_fork
@@ -51,61 +52,96 @@ sys_fork(struct trapframe *tf, pid_t *retval)
 
 /*
  * sys_getpid
+ * Returns the process id of the current process.
  */
 void
 sys_getpid(pid_t *retval)
 {
-    // get current thread pid
-    *retval=curthread->t_pid;
+	*retval = curthread->t_pid;
 }
 
 /*
  * sys_waitpid
+ * Wait for the process "pid" to exit
+ * Save exit status of process pid to integer pointer "status"
+ * If "option" is WNOHANG and the process "pid" has not yet exited,
+ * return 0. On success, return 0. On error, return proper errno.
  */
 int
 sys_waitpid(pid_t pid, int *status, int opt, pid_t *retval)
 {
-    // return if pid does not exist
-    if (pid_valid(pid)!=0) {
-        return ESRCH;
-    }
-    // return if status pointer is invalid
-    if (!status) {
-        return EFAULT;
-    }
-    // return if opt argument is invalid
-    if (opt!=0 && opt!=WNOHANG) {
-        return EINVAL;
-    }
-    // return if pid is child of current thread
-    if (!pid_parent(curthread->t_pid, pid)) {
-        return ECHILD;
-    }
-    // wait for exit status of thread in status
-	*retval = pid_join(pid, status, opt);
-	// return error
-	if (*retval<0){
-		return -(*retval);
+	if (pid_valid(pid) != 0) {
+		return ESRCH;
 	}
-    // success
-    return 0;
+	
+	// If the status argument was an invalid pointer
+	if (! status) {
+		return EFAULT;
+	}
+
+	// If the options argument requested invalid or unsupported options
+	if (opt != 0 && opt != WNOHANG) {
+		return EINVAL;
+	}
+
+	// If given pid is a child of current thread
+	if (! pid_is_parent_child(curthread->t_pid, pid)){
+		return ECHILD;
+	}
+
+	*retval = pid_join(pid, status, opt);
+
+	// On error, error code is returned
+	if ( *retval < 0){
+		return -(*retval); // return positive errno
+	}
+
+	// On success
+	return 0;
 }
+
 
 /*
  * sys_kill
+ * Send signal sig to process pid. Validate signal and its implementation. On
+ * success, 0 is returned. On error, return errno.
  */
 int
 sys_kill(pid_t pid, int sig)
 {
-    // Validate signal sig
-	if (sig<0 || sig>32) {
+	// Validate signal sig
+	if (sig < 0 || sig > _NSIG) {
 		return EINVAL;
 	}
 
+	// Check the implementation of sig
+	switch (sig) {
+		/* Signals with implementations */
+		
+		// Signal to terminate the the process
+		case SIGHUP:
+		case SIGINT:
+		case SIGKILL:
+		case SIGTERM:
+
+		// Signal to stop and cont
+		case SIGSTOP:
+		case SIGCONT:
+		
+		// Signal to be ignored, do nothing
+		case SIGWINCH:
+		case SIGINFO:
+			break;
+
+		/* Signals without implemenations */
+		default:
+			return EUNIMP;
+			break; // Should have never been reached.
+	}
+	
 	int err = pid_set_flag(pid, sig);
 	if (err) {
 		return err;
 	}
 	return 0;
 }
-

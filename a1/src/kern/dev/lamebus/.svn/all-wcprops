@@ -3,6 +3,60 @@ svn:wc:ra_dav:version-url
 V 56
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus
 END
+lser_att.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/lser_att.c
+END
+ltrace.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/ltrace.h
+END
+ltrace_att.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/ltrace_att.c
+END
+emu.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/emu.c
+END
+beep_ltimer.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/beep_ltimer.c
+END
+emu.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/emu.h
+END
+conf.lamebus
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/conf.lamebus
+END
+lscreen.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/lscreen.c
+END
+random_lrandom.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/random_lrandom.c
+END
 emu_att.c
 K 25
 svn:wc:ra_dav:version-url
@@ -57,17 +111,17 @@ svn:wc:ra_dav:version-url
 V 70
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/con_lscreen.c
 END
-ltimer.c
-K 25
-svn:wc:ra_dav:version-url
-V 65
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/ltimer.c
-END
 lrandom.c
 K 25
 svn:wc:ra_dav:version-url
 V 66
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/lrandom.c
+END
+ltimer.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/ltimer.c
 END
 lamebus.h
 K 25
@@ -75,29 +129,23 @@ svn:wc:ra_dav:version-url
 V 66
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/lamebus.h
 END
-ltimer.h
-K 25
-svn:wc:ra_dav:version-url
-V 65
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/ltimer.h
-END
 lrandom.h
 K 25
 svn:wc:ra_dav:version-url
 V 66
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/lrandom.h
 END
+ltimer.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/ltimer.h
+END
 lnet.c
 K 25
 svn:wc:ra_dav:version-url
 V 63
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/lnet.c
-END
-ltimer_att.c
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/ltimer_att.c
 END
 con_lser.c
 K 25
@@ -111,23 +159,17 @@ svn:wc:ra_dav:version-url
 V 70
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/lrandom_att.c
 END
+ltimer_att.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/ltimer_att.c
+END
 lser.c
 K 25
 svn:wc:ra_dav:version-url
 V 63
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/lser.c
-END
-ltrace.c
-K 25
-svn:wc:ra_dav:version-url
-V 65
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/ltrace.c
-END
-lser.h
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/lser.h
 END
 lnet_att.c
 K 25
@@ -135,57 +177,15 @@ svn:wc:ra_dav:version-url
 V 67
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/lnet_att.c
 END
-lser_att.c
+lser.h
 K 25
 svn:wc:ra_dav:version-url
-V 67
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/lser_att.c
+V 63
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/lser.h
 END
-ltrace.h
+ltrace.c
 K 25
 svn:wc:ra_dav:version-url
 V 65
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/ltrace.h
-END
-ltrace_att.c
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/ltrace_att.c
-END
-emu.c
-K 25
-svn:wc:ra_dav:version-url
-V 62
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/emu.c
-END
-beep_ltimer.c
-K 25
-svn:wc:ra_dav:version-url
-V 70
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/beep_ltimer.c
-END
-lscreen.c
-K 25
-svn:wc:ra_dav:version-url
-V 66
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/lscreen.c
-END
-conf.lamebus
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/conf.lamebus
-END
-emu.h
-K 25
-svn:wc:ra_dav:version-url
-V 62
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/emu.h
-END
-random_lrandom.c
-K 25
-svn:wc:ra_dav:version-url
-V 73
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/random_lrandom.c
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/dev/lamebus/ltrace.c
 END

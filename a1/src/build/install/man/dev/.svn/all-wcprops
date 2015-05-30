@@ -3,42 +3,6 @@ svn:wc:ra_dav:version-url
 V 61
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/dev
 END
-null.html
-K 25
-svn:wc:ra_dav:version-url
-V 71
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/dev/null.html
-END
-beep.html
-K 25
-svn:wc:ra_dav:version-url
-V 71
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/dev/beep.html
-END
-lscreen.html
-K 25
-svn:wc:ra_dav:version-url
-V 74
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/dev/lscreen.html
-END
-lrandom.html
-K 25
-svn:wc:ra_dav:version-url
-V 74
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/dev/lrandom.html
-END
-ltimer.html
-K 25
-svn:wc:ra_dav:version-url
-V 73
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/dev/ltimer.html
-END
-random.html
-K 25
-svn:wc:ra_dav:version-url
-V 73
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/dev/random.html
-END
 rtclock.html
 K 25
 svn:wc:ra_dav:version-url
@@ -86,4 +50,40 @@ K 25
 svn:wc:ra_dav:version-url
 V 74
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/dev/lamebus.html
+END
+null.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/dev/null.html
+END
+beep.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/dev/beep.html
+END
+lscreen.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/dev/lscreen.html
+END
+lrandom.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/dev/lrandom.html
+END
+ltimer.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/dev/ltimer.html
+END
+random.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/dev/random.html
 END

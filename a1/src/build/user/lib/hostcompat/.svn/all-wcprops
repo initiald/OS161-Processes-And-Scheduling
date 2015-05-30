@@ -3,12 +3,6 @@ svn:wc:ra_dav:version-url
 V 65
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/user/lib/hostcompat
 END
-time.ho
-K 25
-svn:wc:ra_dav:version-url
-V 73
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/user/lib/hostcompat/time.ho
-END
 hostcompat.ho
 K 25
 svn:wc:ra_dav:version-url
@@ -20,4 +14,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 72
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/user/lib/hostcompat/err.ho
+END
+time.ho
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/user/lib/hostcompat/time.ho
 END

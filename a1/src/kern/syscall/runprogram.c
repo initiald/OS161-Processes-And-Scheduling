@@ -44,6 +44,7 @@
 #include <vfs.h>
 #include <syscall.h>
 #include <test.h>
+#include <copyinout.h>
 
 /*
  * Load program "progname" and start running it in usermode.
@@ -52,7 +53,7 @@
  * Calls vfs_open on progname and thus may destroy it.
  */
 int
-runprogram(char *progname, char **argv, unsigned int argc)
+runprogram(char *progname, int argc, char **argv)
 {
 	struct vnode *v;
 	vaddr_t entrypoint, stackptr;
@@ -94,17 +95,17 @@ runprogram(char *progname, char **argv, unsigned int argc)
 		/* thread_exit destroys curthread->t_addrspace */
 		return result;
 	}
-	
+
 	//Create padding
 	userptr_t pass_args[argc]; //size of the array
 	int length; //initial length
 	
-	for (unsigned int i =0; i < argc; i++){
+	for (int i =0; i < argc; i++){
 		length = strlen(argv[i]); //length of current argument
 		stackptr -= sizeof(char) * (length + 1); //adjust pointer to copy string
 		stackptr -= stackptr % 4; //normalize to fit with the space
 		
-		if (copyoutstr(argv[i], (userptr_t) stackptr, length+1, NULL) != 0);{
+		if (copyoutstr(argv[i], (userptr_t) stackptr, length+1, NULL) != 0) {
 			panic("Arguments can not move");
 		} //copy out
 		
@@ -121,11 +122,12 @@ runprogram(char *progname, char **argv, unsigned int argc)
 	//adjust pointer to copy out with proper normalization on address
 	stackptr -= (argc + 1) * sizeof(userptr_t);
 	stackptr -= stackptr % 8;
-
+ 
 	//copyout the stack
 	copyout(pass_args, (userptr_t) stackptr, argc * sizeof(userptr_t));
+
 	/* Warp to user mode. */
-	enter_new_process(argc, (userptr_t) stackptr,
+	enter_new_process(argc /*argc*/, (userptr_t) stackptr,
 			  stackptr, entrypoint);
 	
 	/* enter_new_process does not return. */

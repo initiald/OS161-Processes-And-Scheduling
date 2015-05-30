@@ -42,7 +42,7 @@
 #include <current.h>
 #include <synch.h>
 #include <pid.h>
-#include <copyinout.h>  //helps with the pid functions
+#include <copyinout.h>
 
 /*
  * Structure for holding PID and return data for a thread.
@@ -54,7 +54,7 @@
 struct pidinfo {
 	pid_t pi_pid;			// process id of this thread
 	pid_t pi_ppid;			// process id of parent thread
-	volatile bool pi_exited;// true if thread has exited
+	volatile bool pi_exited;	// true if thread has exited
 	int pi_exitstatus;		// status (only valid if exited)
 	struct cv *pi_cv;		// use to wait for thread exit
 	struct cv *pi_cv_stop;	// use to wait for SIGCONT if SIGSTOP is set
@@ -105,7 +105,6 @@ pidinfo_create(pid_t pid, pid_t ppid)
 		kfree(pi);
 		return NULL;
 	}
-
 	pi->pi_pid = pid;
 	pi->pi_ppid = ppid;
 	pi->pi_exited = false;
@@ -362,7 +361,6 @@ pid_detach(pid_t childpid)
 	else{
 		childThread->pi_ppid = INVALID_PID;
 	}
-	
 	lock_release(pidlock);
 	return 0; //success
 }
@@ -383,13 +381,13 @@ pid_exit(int status, bool dodetach)
 	
 	//(void)dodetach; /* for compiler - delete when dodetach has real use */
 
-	lock_acquire(pidlock);
-	
 	// Implement me. Existing code simply sets the exit status.
-	
+	lock_acquire(pidlock);
+
 	my_pi = pi_get(curthread->t_pid);
 	KASSERT(my_pi != NULL);
 	my_pi->pi_exitstatus = status;
+
 	my_pi->pi_exited = true;
 	
 	//Let other threads know about the lock
@@ -413,7 +411,7 @@ pid_exit(int status, bool dodetach)
 	if (my_pi->pi_ppid == INVALID_PID){
 		pi_drop(curthread->t_pid);
 	}
-	
+
 	lock_release(pidlock);
 }
 
@@ -482,18 +480,24 @@ pid_join(pid_t targetpid, int *status, int flags)
 
 //additional monitoring tools for pid
 
- * returns 0 if flag is set
+/*
+ * pid_set_flag:
+ * Set signal sig to process flag. On success, 0 is returned. On error,
+ * return errno.
  */
 int
-pid_set_flag(pid_t pid, int sig) {
-	//acquire lock and validate
+pid_set_flag(pid_t pid, int sig)
+{
+	//acquire lock
 	lock_acquire(pidlock);
-	if (pid_valid(pid) != 0) {
+	
+	//if the value is not zero, release lock, return error
+	if (pid_valid(pid) != 0){
 		lock_release(pidlock);
 		return EINVAL;
 	}
-
-	// get info
+	
+	// Extract info of the process
 	struct pidinfo* pi = pi_get(pid);
 	if (pi == NULL){
 		lock_release(pidlock);
@@ -501,73 +505,82 @@ pid_set_flag(pid_t pid, int sig) {
 	}
 	//set flag
 	pi->pi_flag = sig;
+
+	//release lock
 	lock_release(pidlock);
 	return 0;
 }
 
 /*
- * returns flag of pid
+ * pid_get_flag: Return signal flag of the process specified by pid. On error,
+ * a negative errno is returned.
  */
 int
-pid_get_flag(pid_t pid) {
-	//acquire lock and validate
+pid_get_flag(pid_t pid)
+{
+	// Validate pid 	
+	if (pid_valid(pid) != 0)
+		return -ESRCH;
+
+	// Extract process info
 	lock_acquire(pidlock);
-	if (pid_valid(pid) != 0) {
-		lock_release(pidlock);
-		return EINVAL;
-	}
-	// get info
 	struct pidinfo* pi = pi_get(pid);
-	if (pi==NULL){
+	if (pi == NULL){
 		lock_release(pidlock);
 		return -ESRCH;
 	}
 
-	int flag=pi->pi_flag;
+	int flag = pi->pi_flag;
 	lock_release(pidlock);
 	return flag;
 }
 
 /*
- * returns 0 if pid valid, otherwise ERRNO
+ * pid_valid: Return 0 if given pid is valid, otherwise return errno.
  */
 int
-pid_valid(pid_t pid) {
-	if (pid==INVALID_PID || pid<PID_MIN || pid>PID_MAX)
+pid_valid(pid_t pid)
+{
+	if (pid == INVALID_PID || pid < PID_MIN || pid > PID_MAX)
     	return EINVAL;
-
+ 
  	lock_acquire(pidlock);
 	struct pidinfo* pi = pi_get(pid);
 	lock_release(pidlock);
 
-	if (!pi) {
+	if (! pi) {
 		return ESRCH;
 	}
 	return 0;
 }
 
 /*
- * returns 1 if pid_p is parent of pid_c, otherwise return 0
+ * pid_is_parent_chid:
+ * Return 1 if pid_p is the parent of pid_c, otherwise return 0. On error,
+ * return a negative errno.
  */
 int
-pid_parent(pid_t pid_p, pid_t pid_c) {
-	// Validate parent and child pid
-	if ((pid_valid(pid_p)!=0) || (pid_valid(pid_c)!=0)) {
+pid_is_parent_child(pid_t pid_p, pid_t pid_c)
+{
+	// Validate parent pid, and child pid
+	if ( (pid_valid(pid_p) != 0) || (pid_valid(pid_c) != 0) ) {
 		return -EINVAL;
 	}
 
 	// Extract the pidinfo of the parent pid and the child pid
 	struct pidinfo* pi_p = pi_get(pid_p);
 	struct pidinfo* pi_c = pi_get(pid_c);
-	if (!pi_p || !pi_c) {
+	if ( ! pi_p || ! pi_c) {
 		lock_release(pidlock);
 		return -ESRCH;
 	}
 	
 	// Release lock and return comparision result
-	if (pi_c->pi_ppid==pid_p) {
+	if (pi_c->pi_ppid == pid_p) {
 		return 1;
-	} else {
+	}
+	else {
 		return 0;
 	}
 }
+

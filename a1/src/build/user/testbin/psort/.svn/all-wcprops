@@ -3,6 +3,12 @@ svn:wc:ra_dav:version-url
 V 64
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/user/testbin/psort
 END
+psort
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/user/testbin/psort/psort
+END
 psort.ho
 K 25
 svn:wc:ra_dav:version-url
@@ -14,10 +20,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 75
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/user/testbin/psort/host-psort
-END
-psort
-K 25
-svn:wc:ra_dav:version-url
-V 70
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/user/testbin/psort/psort
 END

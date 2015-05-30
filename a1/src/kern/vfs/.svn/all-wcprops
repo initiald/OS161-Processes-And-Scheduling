@@ -3,6 +3,18 @@ svn:wc:ra_dav:version-url
 V 48
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/vfs
 END
+vfscwd.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/vfs/vfscwd.c
+END
+device.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/vfs/device.c
+END
 vfslookup.c
 K 25
 svn:wc:ra_dav:version-url
@@ -32,16 +44,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 56
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/vfs/vnode.c
-END
-vfscwd.c
-K 25
-svn:wc:ra_dav:version-url
-V 57
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/vfs/vfscwd.c
-END
-device.c
-K 25
-svn:wc:ra_dav:version-url
-V 57
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/vfs/device.c
 END

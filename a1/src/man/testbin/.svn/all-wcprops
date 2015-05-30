@@ -3,47 +3,11 @@ svn:wc:ra_dav:version-url
 V 51
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin
 END
-triplesort.html
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/triplesort.html
-END
-malloctest.html
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/malloctest.html
-END
-triplehuge.html
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/triplehuge.html
-END
-argtest.html
-K 25
-svn:wc:ra_dav:version-url
-V 64
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/argtest.html
-END
-Makefile
-K 25
-svn:wc:ra_dav:version-url
-V 60
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/Makefile
-END
 hog.html
 K 25
 svn:wc:ra_dav:version-url
 V 60
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/hog.html
-END
-rmtest.html
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/rmtest.html
 END
 dirtest.html
 K 25
@@ -57,96 +21,6 @@ svn:wc:ra_dav:version-url
 V 60
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/sty.html
 END
-guzzle.html
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/guzzle.html
-END
-badcall.html
-K 25
-svn:wc:ra_dav:version-url
-V 64
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/badcall.html
-END
-ctest.html
-K 25
-svn:wc:ra_dav:version-url
-V 62
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/ctest.html
-END
-farm.html
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/farm.html
-END
-dirseek.html
-K 25
-svn:wc:ra_dav:version-url
-V 64
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/dirseek.html
-END
-sort.html
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/sort.html
-END
-huge.html
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/huge.html
-END
-userthreads.html
-K 25
-svn:wc:ra_dav:version-url
-V 68
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/userthreads.html
-END
-bigfile.html
-K 25
-svn:wc:ra_dav:version-url
-V 64
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/bigfile.html
-END
-forkbomb.html
-K 25
-svn:wc:ra_dav:version-url
-V 65
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/forkbomb.html
-END
-sink.html
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/sink.html
-END
-index.html
-K 25
-svn:wc:ra_dav:version-url
-V 62
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/index.html
-END
-tictac.html
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/tictac.html
-END
-conman.html
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/conman.html
-END
-rmdirtest.html
-K 25
-svn:wc:ra_dav:version-url
-V 66
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/rmdirtest.html
-END
 filetest.html
 K 25
 svn:wc:ra_dav:version-url
@@ -159,17 +33,23 @@ svn:wc:ra_dav:version-url
 V 65
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/randcall.html
 END
+ctest.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/ctest.html
+END
+badcall.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/badcall.html
+END
 hash.html
 K 25
 svn:wc:ra_dav:version-url
 V 61
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/hash.html
-END
-matmult.html
-K 25
-svn:wc:ra_dav:version-url
-V 64
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/matmult.html
 END
 f_test.html
 K 25
@@ -177,11 +57,101 @@ svn:wc:ra_dav:version-url
 V 63
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/f_test.html
 END
+dirseek.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/dirseek.html
+END
+userthreads.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/userthreads.html
+END
+tail.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/tail.html
+END
+bigfile.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/bigfile.html
+END
+forktest.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/forktest.html
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/index.html
+END
+malloctest.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/malloctest.html
+END
+triplesort.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/triplesort.html
+END
+triplehuge.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/triplehuge.html
+END
+rmdirtest.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/rmdirtest.html
+END
+rmtest.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/rmtest.html
+END
+guzzle.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/guzzle.html
+END
+matmult.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/matmult.html
+END
 kitchen.html
 K 25
 svn:wc:ra_dav:version-url
 V 64
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/kitchen.html
+END
+farm.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/farm.html
+END
+sort.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/sort.html
 END
 add.html
 K 25
@@ -189,11 +159,11 @@ svn:wc:ra_dav:version-url
 V 60
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/add.html
 END
-tail.html
+huge.html
 K 25
 svn:wc:ra_dav:version-url
 V 61
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/tail.html
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/huge.html
 END
 crash.html
 K 25
@@ -207,11 +177,11 @@ svn:wc:ra_dav:version-url
 V 66
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/triplemat.html
 END
-forktest.html
+forkbomb.html
 K 25
 svn:wc:ra_dav:version-url
 V 65
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/forktest.html
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/forkbomb.html
 END
 faulter.html
 K 25
@@ -224,4 +194,34 @@ K 25
 svn:wc:ra_dav:version-url
 V 62
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/palin.html
+END
+sink.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/sink.html
+END
+tictac.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/tictac.html
+END
+argtest.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/argtest.html
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/Makefile
+END
+conman.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/testbin/conman.html
 END

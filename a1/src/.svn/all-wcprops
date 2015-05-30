@@ -3,18 +3,6 @@ svn:wc:ra_dav:version-url
 V 39
 /svn/cscc69s15/group7/a1/!svn/ver/1/src
 END
-sys161.conf
-K 25
-svn:wc:ra_dav:version-url
-V 51
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/sys161.conf
-END
-Makefile
-K 25
-svn:wc:ra_dav:version-url
-V 48
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/Makefile
-END
 configure
 K 25
 svn:wc:ra_dav:version-url
@@ -44,4 +32,16 @@ K 25
 svn:wc:ra_dav:version-url
 V 47
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/CHANGES
+END
+sys161.conf
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/sys161.conf
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/Makefile
 END

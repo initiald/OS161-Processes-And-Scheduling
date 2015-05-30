@@ -3,6 +3,30 @@ svn:wc:ra_dav:version-url
 V 57
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/bin
 END
+cp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/bin/cp
+END
+mv
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/bin/mv
+END
+mkdir
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/bin/mkdir
+END
+cat
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/bin/cat
+END
 ln
 K 25
 svn:wc:ra_dav:version-url
@@ -56,28 +80,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 62
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/bin/true
-END
-cp
-K 25
-svn:wc:ra_dav:version-url
-V 60
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/bin/cp
-END
-mv
-K 25
-svn:wc:ra_dav:version-url
-V 60
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/bin/mv
-END
-mkdir
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/bin/mkdir
-END
-cat
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/bin/cat
 END

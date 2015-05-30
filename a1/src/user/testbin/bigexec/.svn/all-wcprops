@@ -3,6 +3,12 @@ svn:wc:ra_dav:version-url
 V 60
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/bigexec
 END
+bigexec.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/bigexec/bigexec.c
+END
 .depend
 K 25
 svn:wc:ra_dav:version-url
@@ -14,10 +20,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 69
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/bigexec/Makefile
-END
-bigexec.c
-K 25
-svn:wc:ra_dav:version-url
-V 70
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/bigexec/bigexec.c
 END

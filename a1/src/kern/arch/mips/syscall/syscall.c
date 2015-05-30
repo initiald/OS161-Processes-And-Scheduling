@@ -131,13 +131,13 @@ syscall(struct trapframe *tf)
 		    panic("Returning from exit\n");
 
         case SYS_fork:
-		    err = sys_fork(tf, &retval);
-		    break;
+	        err = sys_fork(tf, &retval);
+	        break;
 
         /* ASST1 - You need to fill in the code for each of these cases */
         case SYS_getpid:
             sys_getpid(&retval);
-            break;
+			break;
 
         case SYS_waitpid:
             err = sys_waitpid((pid_t)tf->tf_a0, (int *)tf->tf_a1,
@@ -145,7 +145,7 @@ syscall(struct trapframe *tf)
 			break;
 
         case SYS_kill:
-			err = sys_kill((pid_t)tf->tf_a0, (int)tf->tf_a1);
+            err = sys_kill((pid_t)tf->tf_a0, (int)tf->tf_a1);
 			break;
 
 	    /* Even more system calls will go here */

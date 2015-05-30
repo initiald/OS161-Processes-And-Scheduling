@@ -3,6 +3,18 @@ svn:wc:ra_dav:version-url
 V 61
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/bin
 END
+cp.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/bin/cp.html
+END
+mv.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/bin/mv.html
+END
 mkdir.html
 K 25
 svn:wc:ra_dav:version-url
@@ -74,16 +86,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 71
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/bin/true.html
-END
-cp.html
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/bin/cp.html
-END
-mv.html
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/bin/mv.html
 END
