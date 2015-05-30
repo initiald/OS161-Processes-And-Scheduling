@@ -78,12 +78,6 @@ int pid_set_flag(pid_t pid, int sig);
 /* get flag */
 int pid_get_flag(pid_t pid);
 
-/* is this a valid pid */
-int pid_valid(pid_t pid);
-
-/* Check whether if it there a parent child relationship */
-int pid_is_parent_child(pid_t pid_p, pid_t pid_c);
-
 /* Put a process into sleep state - waiting */
 int pid_sleep(pid_t t_pid);
 
