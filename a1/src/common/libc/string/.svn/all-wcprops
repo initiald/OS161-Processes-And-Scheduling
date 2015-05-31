@@ -3,6 +3,18 @@ svn:wc:ra_dav:version-url
 V 58
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/common/libc/string
 END
+strcat.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/libc/string/strcat.c
+END
+bzero.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/libc/string/bzero.c
+END
 strcpy.c
 K 25
 svn:wc:ra_dav:version-url
@@ -50,16 +62,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 67
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/common/libc/string/memcpy.c
-END
-strcat.c
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/libc/string/strcat.c
-END
-bzero.c
-K 25
-svn:wc:ra_dav:version-url
-V 66
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/libc/string/bzero.c
 END

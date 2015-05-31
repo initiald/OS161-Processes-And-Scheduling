@@ -3,6 +3,12 @@ svn:wc:ra_dav:version-url
 V 53
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/user/bin/true
 END
+true.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/bin/true/true.c
+END
 .depend
 K 25
 svn:wc:ra_dav:version-url
@@ -14,10 +20,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 62
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/user/bin/true/Makefile
-END
-true.c
-K 25
-svn:wc:ra_dav:version-url
-V 60
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/bin/true/true.c
 END

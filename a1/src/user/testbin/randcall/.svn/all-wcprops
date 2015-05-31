@@ -3,6 +3,18 @@ svn:wc:ra_dav:version-url
 V 61
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/randcall
 END
+.depend
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/randcall/.depend
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/randcall/Makefile
+END
 gencalls.sh
 K 25
 svn:wc:ra_dav:version-url
@@ -26,16 +38,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 70
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/randcall/extern.h
-END
-.depend
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/randcall/.depend
-END
-Makefile
-K 25
-svn:wc:ra_dav:version-url
-V 70
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/testbin/randcall/Makefile
 END

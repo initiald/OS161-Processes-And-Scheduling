@@ -3,6 +3,72 @@ svn:wc:ra_dav:version-url
 V 48
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc
 END
+time.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/time.html
+END
+strcat.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/strcat.html
+END
+setjmp.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/setjmp.html
+END
+snprintf.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/snprintf.html
+END
+memmove.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/memmove.html
+END
+strchr.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/strchr.html
+END
+putchar.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/putchar.html
+END
+malloc.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/malloc.html
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/index.html
+END
+strcmp.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/strcmp.html
+END
+exit.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/exit.html
+END
 getcwd.html
 K 25
 svn:wc:ra_dav:version-url
@@ -105,17 +171,17 @@ svn:wc:ra_dav:version-url
 V 57
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/Makefile
 END
-bzero.html
-K 25
-svn:wc:ra_dav:version-url
-V 59
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/bzero.html
-END
 realloc.html
 K 25
 svn:wc:ra_dav:version-url
 V 61
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/realloc.html
+END
+bzero.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/bzero.html
 END
 strerror.html
 K 25
@@ -123,17 +189,17 @@ svn:wc:ra_dav:version-url
 V 62
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/strerror.html
 END
-strcpy.html
-K 25
-svn:wc:ra_dav:version-url
-V 60
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/strcpy.html
-END
 system.html
 K 25
 svn:wc:ra_dav:version-url
 V 60
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/system.html
+END
+strcpy.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/strcpy.html
 END
 __vprintf.html
 K 25
@@ -158,70 +224,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 60
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/calloc.html
-END
-time.html
-K 25
-svn:wc:ra_dav:version-url
-V 58
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/time.html
-END
-strcat.html
-K 25
-svn:wc:ra_dav:version-url
-V 60
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/strcat.html
-END
-setjmp.html
-K 25
-svn:wc:ra_dav:version-url
-V 60
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/setjmp.html
-END
-snprintf.html
-K 25
-svn:wc:ra_dav:version-url
-V 62
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/snprintf.html
-END
-memmove.html
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/memmove.html
-END
-strchr.html
-K 25
-svn:wc:ra_dav:version-url
-V 60
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/strchr.html
-END
-putchar.html
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/putchar.html
-END
-malloc.html
-K 25
-svn:wc:ra_dav:version-url
-V 60
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/malloc.html
-END
-index.html
-K 25
-svn:wc:ra_dav:version-url
-V 59
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/index.html
-END
-strcmp.html
-K 25
-svn:wc:ra_dav:version-url
-V 60
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/strcmp.html
-END
-exit.html
-K 25
-svn:wc:ra_dav:version-url
-V 58
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/libc/exit.html
 END

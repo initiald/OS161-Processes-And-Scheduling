@@ -109,18 +109,18 @@ syscall(struct trapframe *tf)
 				     (userptr_t)tf->tf_a1);
 		    break;
 
-        /* ASST1: These implementations of read and write only work for
-         * console I/O (stdin, stdout and stderr file descriptors)
-         */
-        case SYS_read:
-            err = sys_read(tf->tf_a0, (userptr_t)tf->tf_a1, tf->tf_a2,
-                           &retval);
-            break;
+            /* ASST1: These implementations of read and write only work for
+             * console I/O (stdin, stdout and stderr file descriptors)
+             */
+            case SYS_read:
+                err = sys_read(tf->tf_a0, (userptr_t)tf->tf_a1, tf->tf_a2,
+                               &retval);
+                break;
 
-        case SYS_write:
-            err = sys_write(tf->tf_a0, (userptr_t)tf->tf_a1, tf->tf_a2,
-                            &retval);
-            break;
+            case SYS_write:
+                err = sys_write(tf->tf_a0, (userptr_t)tf->tf_a1, tf->tf_a2,
+                                &retval);
+                break;
 
 	    /* process calls */
 	
@@ -130,31 +130,31 @@ syscall(struct trapframe *tf)
 		    thread_exit(_MKWAIT_EXIT(tf->tf_a0));
 		    panic("Returning from exit\n");
 
-        case SYS_fork:
-	        err = sys_fork(tf, &retval);
-	        break;
+            case SYS_fork:
+		    err = sys_fork(tf, &retval);
+		    break;
 
-        /* ASST1 - You need to fill in the code for each of these cases */
-        case SYS_getpid:
-            sys_getpid(&retval);
-            break;
-        case SYS_waitpid:
-           	err = sys_waitpid((pid_t)tf->tf_a0, (int *)tf->tf_a1, (int)tf->tf_a2, &retval);
-			if (err) {
-				kprintf("Error: sys_waitpid");
-				err = retval;
-			}
+            /* ASST1 - You need to fill in the code for each of these cases */
+            case SYS_getpid:
+			err = sys_getpid(&retval);
 			break;
-        case SYS_kill:
-            err = sys_kill((pid_t) tf->tf_a0, (int) tf->tf_a1);
-            break;
+
+            case SYS_waitpid:
+			err = sys_waitpid(&retval, (pid_t) tf->tf_a0, (int *) tf->tf_a1, 
+					(int) tf->tf_a2);
+			break;
+
+            case SYS_kill:
+			err = sys_kill((pid_t) tf->tf_a0, (int) tf->tf_a1);
+			break;
+
 
 	    /* Even more system calls will go here */
  
 	    default:
-		    kprintf("Unknown syscall %d\n", callno);
-		    err = ENOSYS;
-		    break;
+		kprintf("Unknown syscall %d\n", callno);
+		err = ENOSYS;
+		break;
 	}
 
 

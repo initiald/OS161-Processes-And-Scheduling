@@ -39,8 +39,10 @@
 #include <vm.h>
 #include <mainbus.h>
 #include <syscall.h>
-#include <synch.h>
+
 #include <pid.h>
+#include <kern/signal.h>
+#include <kern/sysexits.h>
 
 
 /* in exception.S */
@@ -140,32 +142,6 @@ mips_trap(struct trapframe *tf)
 	code = (tf->tf_cause & CCA_CODE) >> CCA_CODESHIFT;
 	isutlb = (tf->tf_cause & CCA_UTLB) != 0;
 	iskern = (tf->tf_status & CST_KUp) == 0;
-
-	if (!iskern){
-		switch (pid_get_flag(curthread->t_pid)){
-			case SIGHUP:
-				thread_exit(0);
-				break;
-			case SIGINT:
-				thread_exit(0);
-				break;
-			case SIGKILL:
-				thread_exit(0);
-				break;
-			case SIGTERM:
-				thread_exit(0);
-				break;
-			case SIGSTOP:
-				pid_sleep(curthread->t_pid);
-				break;
-			case SIGCONT:
-				break;
-			case SIGWINCH:
-				break;
-			case SIGINFO:
-				break;
-		}
-	}
 
 	KASSERT(code < NTRAPCODES);
 
@@ -346,6 +322,30 @@ mips_trap(struct trapframe *tf)
 	 * Turn interrupts off on the processor, without affecting the
 	 * stored interrupt state.
 	 */
+
+	/* Signal parsing. */
+	switch (pid_get_flag(curthread->t_pid)){
+		case SIGHUP: // terminate process
+		case SIGINT:
+		case SIGKILL:
+		case SIGTERM:
+			thread_exit(0);
+			break;
+
+		case SIGSTOP: // stop process from executing until SIGCONT recieved
+			// unimplemented at this time
+			break;
+
+		case SIGCONT: //continue after SIGSTOP
+			// unimplemented at this time
+			break;
+
+		case SIGWINCH: // ignore signal
+		case SIGINFO:
+		default: // unimplemented
+			break;
+	}
+
 	cpu_irqoff();
  done2:
 

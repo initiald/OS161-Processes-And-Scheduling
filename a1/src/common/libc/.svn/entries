@@ -26,9 +26,6 @@ root
 
 787f9a0b-4a36-4383-a646-1324de643ca3
 
-string
-dir
-
 arch
 dir
 
@@ -36,5 +33,8 @@ stdlib
 dir
 
 printf
+dir
+
+string
 dir
 

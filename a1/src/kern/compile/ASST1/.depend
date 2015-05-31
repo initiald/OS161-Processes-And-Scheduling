@@ -313,8 +313,10 @@ proc_syscalls.o: ../../syscall/proc_syscalls.c ../../include/types.h \
   includelinks/kern/machine/setjmp.h ../../include/current.h \
   includelinks/machine/current.h ../../include/pid.h \
   includelinks/machine/trapframe.h ../../include/syscall.h \
-  ../../include/kern/wait.h ../../include/signal.h \
-  includelinks/kern/machine/signal.h ../../include/kern/signal.h
+  ../../include/limits.h ../../include/kern/limits.h \
+  ../../include/kern/wait.h ../../include/copyinout.h \
+  ../../include/signal.h includelinks/kern/machine/signal.h \
+  ../../include/kern/signal.h
 runprogram.o: ../../syscall/runprogram.c ../../include/types.h \
   ../../include/kern/types.h includelinks/kern/machine/types.h \
   includelinks/machine/types.h ../../include/kern/errno.h \
@@ -539,8 +541,8 @@ trap.o: ../../arch/mips/locore/trap.c ../../include/types.h \
   includelinks/machine/thread.h ../../include/setjmp.h \
   includelinks/kern/machine/setjmp.h ../../include/current.h \
   includelinks/machine/current.h ../../include/vm.h \
-  ../../include/mainbus.h ../../include/syscall.h ../../include/synch.h \
-  ../../include/pid.h
+  ../../include/mainbus.h ../../include/syscall.h ../../include/pid.h \
+  ../../include/kern/sysexits.h
 syscall.o: ../../arch/mips/syscall/syscall.c ../../include/types.h \
   ../../include/kern/types.h includelinks/kern/machine/types.h \
   includelinks/machine/types.h ../../include/kern/errno.h \

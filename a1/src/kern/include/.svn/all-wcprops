@@ -3,6 +3,30 @@ svn:wc:ra_dav:version-url
 V 52
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include
 END
+vm.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/vm.h
+END
+cdefs.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/cdefs.h
+END
+stdarg.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/stdarg.h
+END
+thread.h.safe
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/thread.h.safe
+END
 addrspace.h
 K 25
 svn:wc:ra_dav:version-url
@@ -69,17 +93,17 @@ svn:wc:ra_dav:version-url
 V 58
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/lib.h
 END
-stat.h
-K 25
-svn:wc:ra_dav:version-url
-V 59
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/stat.h
-END
 vnode.h
 K 25
 svn:wc:ra_dav:version-url
 V 60
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/vnode.h
+END
+stat.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/stat.h
 END
 pid.h
 K 25
@@ -189,39 +213,15 @@ svn:wc:ra_dav:version-url
 V 60
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/array.h
 END
-test.h
-K 25
-svn:wc:ra_dav:version-url
-V 59
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/test.h
-END
 emufs.h
 K 25
 svn:wc:ra_dav:version-url
 V 60
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/emufs.h
 END
-vm.h
+test.h
 K 25
 svn:wc:ra_dav:version-url
-V 57
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/vm.h
-END
-cdefs.h
-K 25
-svn:wc:ra_dav:version-url
-V 60
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/cdefs.h
-END
-stdarg.h
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/stdarg.h
-END
-thread.h.safe
-K 25
-svn:wc:ra_dav:version-url
-V 66
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/thread.h.safe
+V 59
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/include/test.h
 END

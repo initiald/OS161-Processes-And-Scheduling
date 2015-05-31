@@ -1,3 +1,4 @@
+set -e
 cd src
 ./configure --ostree=$HOME/cscc69/root
 

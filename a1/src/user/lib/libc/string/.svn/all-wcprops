@@ -3,18 +3,6 @@ svn:wc:ra_dav:version-url
 V 60
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/user/lib/libc/string
 END
-memset.c
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/lib/libc/string/memset.c
-END
-memcmp.c
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/lib/libc/string/memcmp.c
-END
 strerror.c
 K 25
 svn:wc:ra_dav:version-url
@@ -26,4 +14,16 @@ K 25
 svn:wc:ra_dav:version-url
 V 69
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/user/lib/libc/string/strtok.c
+END
+memset.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/lib/libc/string/memset.c
+END
+memcmp.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/lib/libc/string/memcmp.c
 END

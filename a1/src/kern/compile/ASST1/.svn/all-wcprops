@@ -3,30 +3,6 @@ svn:wc:ra_dav:version-url
 V 58
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1
 END
-files.mk
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/files.mk
-END
-opt-net.h
-K 25
-svn:wc:ra_dav:version-url
-V 68
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/opt-net.h
-END
-.depend
-K 25
-svn:wc:ra_dav:version-url
-V 66
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/.depend
-END
-Makefile
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/Makefile
-END
 autoconf.c
 K 25
 svn:wc:ra_dav:version-url
@@ -74,4 +50,28 @@ K 25
 svn:wc:ra_dav:version-url
 V 74
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/opt-noasserts.h
+END
+files.mk
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/files.mk
+END
+opt-net.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/opt-net.h
+END
+.depend
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/.depend
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/compile/ASST1/Makefile
 END

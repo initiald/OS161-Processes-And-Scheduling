@@ -3,131 +3,17 @@ svn:wc:ra_dav:version-url
 V 61
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin
 END
-faulter
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/faulter
-END
-waittest
-K 25
-svn:wc:ra_dav:version-url
-V 70
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/waittest
-END
-sink
-K 25
-svn:wc:ra_dav:version-url
-V 66
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/sink
-END
-bigexec
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/bigexec
-END
-malloctest
-K 25
-svn:wc:ra_dav:version-url
-V 72
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/malloctest
-END
-triplesort
-K 25
-svn:wc:ra_dav:version-url
-V 72
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/triplesort
-END
-exittest
-K 25
-svn:wc:ra_dav:version-url
-V 70
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/exittest
-END
-simpleforktest
-K 25
-svn:wc:ra_dav:version-url
-V 76
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/simpleforktest
-END
-rmdirtest
-K 25
-svn:wc:ra_dav:version-url
-V 71
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/rmdirtest
-END
-dirtest
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/dirtest
-END
-randcall
-K 25
-svn:wc:ra_dav:version-url
-V 70
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/randcall
-END
-ctest
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/ctest
-END
-badcall
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/badcall
-END
-matmult
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/matmult
-END
-f_test
-K 25
-svn:wc:ra_dav:version-url
-V 68
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/f_test
-END
-kitchen
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/kitchen
-END
-farm
-K 25
-svn:wc:ra_dav:version-url
-V 66
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/farm
-END
-dirseek
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/dirseek
-END
-sort
-K 25
-svn:wc:ra_dav:version-url
-V 66
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/sort
-END
 killtest
 K 25
 svn:wc:ra_dav:version-url
 V 70
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/killtest
 END
-triplemat
+crash
 K 25
 svn:wc:ra_dav:version-url
-V 71
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/triplemat
+V 67
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/crash
 END
 forkbomb
 K 25
@@ -135,17 +21,23 @@ svn:wc:ra_dav:version-url
 V 70
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/forkbomb
 END
-palin
+bigfile
 K 25
 svn:wc:ra_dav:version-url
-V 67
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/palin
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/bigfile
 END
-psort
+faulter
 K 25
 svn:wc:ra_dav:version-url
-V 67
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/psort
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/faulter
+END
+bigexec
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/bigexec
 END
 tictac
 K 25
@@ -159,23 +51,17 @@ svn:wc:ra_dav:version-url
 V 72
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/triplehuge
 END
-argtest
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/argtest
-END
 conman
 K 25
 svn:wc:ra_dav:version-url
 V 68
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/conman
 END
-hog
+rmdirtest
 K 25
 svn:wc:ra_dav:version-url
-V 65
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/hog
+V 71
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/rmdirtest
 END
 rmtest
 K 25
@@ -183,17 +69,17 @@ svn:wc:ra_dav:version-url
 V 68
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/rmtest
 END
+dirtest
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/dirtest
+END
 filetest
 K 25
 svn:wc:ra_dav:version-url
 V 70
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/filetest
-END
-sty
-K 25
-svn:wc:ra_dav:version-url
-V 65
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/sty
 END
 guzzle
 K 25
@@ -201,11 +87,17 @@ svn:wc:ra_dav:version-url
 V 68
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/guzzle
 END
-dirconc
+ctest
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/ctest
+END
+badcall
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/dirconc
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/badcall
 END
 hash
 K 25
@@ -213,17 +105,29 @@ svn:wc:ra_dav:version-url
 V 66
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/hash
 END
+matmult
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/matmult
+END
+kitchen
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/kitchen
+END
+dirseek
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/dirseek
+END
 huge
 K 25
 svn:wc:ra_dav:version-url
 V 66
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/huge
-END
-add
-K 25
-svn:wc:ra_dav:version-url
-V 65
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/add
 END
 tail
 K 25
@@ -237,11 +141,11 @@ svn:wc:ra_dav:version-url
 V 72
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/parallelvm
 END
-crash
+triplemat
 K 25
 svn:wc:ra_dav:version-url
-V 67
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/crash
+V 71
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/triplemat
 END
 forktest
 K 25
@@ -249,9 +153,105 @@ svn:wc:ra_dav:version-url
 V 70
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/forktest
 END
-bigfile
+palin
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/palin
+END
+waittest
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/waittest
+END
+sink
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/sink
+END
+psort
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/psort
+END
+triplesort
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/triplesort
+END
+malloctest
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/malloctest
+END
+argtest
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/bigfile
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/argtest
+END
+exittest
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/exittest
+END
+simpleforktest
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/simpleforktest
+END
+hog
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/hog
+END
+sty
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/sty
+END
+randcall
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/randcall
+END
+dirconc
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/dirconc
+END
+f_test
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/f_test
+END
+farm
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/farm
+END
+sort
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/sort
+END
+add
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/testbin/add
 END

@@ -3,36 +3,6 @@ svn:wc:ra_dav:version-url
 V 60
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode
 END
-longlong.h
-K 25
-svn:wc:ra_dav:version-url
-V 71
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/longlong.h
-END
-ashldi3.c
-K 25
-svn:wc:ra_dav:version-url
-V 70
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/ashldi3.c
-END
-adddi3.c
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/adddi3.c
-END
-subdi3.c
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/subdi3.c
-END
-iordi3.c
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/iordi3.c
-END
 muldi3.c
 K 25
 svn:wc:ra_dav:version-url
@@ -51,17 +21,17 @@ svn:wc:ra_dav:version-url
 V 69
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/notdi2.c
 END
-anddi3.c
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/anddi3.c
-END
 lshldi3.c
 K 25
 svn:wc:ra_dav:version-url
 V 70
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/lshldi3.c
+END
+anddi3.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/anddi3.c
 END
 ucmpdi2.c
 K 25
@@ -75,17 +45,17 @@ svn:wc:ra_dav:version-url
 V 70
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/umoddi3.c
 END
-udivdi3.c
-K 25
-svn:wc:ra_dav:version-url
-V 70
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/udivdi3.c
-END
 qdivrem.c
 K 25
 svn:wc:ra_dav:version-url
 V 70
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/qdivrem.c
+END
+udivdi3.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/udivdi3.c
 END
 negdi2.c
 K 25
@@ -128,4 +98,34 @@ K 25
 svn:wc:ra_dav:version-url
 V 69
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/divdi3.c
+END
+longlong.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/longlong.h
+END
+ashldi3.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/ashldi3.c
+END
+adddi3.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/adddi3.c
+END
+iordi3.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/iordi3.c
+END
+subdi3.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/common/gcc-millicode/subdi3.c
 END

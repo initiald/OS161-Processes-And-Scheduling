@@ -26,10 +26,13 @@ root
 
 787f9a0b-4a36-4383-a646-1324de643ca3
 
-filetest
+rmdirtest
 dir
 
-guzzle
+dirtest
+dir
+
+randcall
 dir
 
 badcall
@@ -38,70 +41,7 @@ dir
 ctest
 dir
 
-hash
-dir
-
 matmult
-dir
-
-kitchen
-dir
-
-dirseek
-dir
-
-huge
-dir
-
-tail
-dir
-
-parallelvm
-dir
-
-forktest
-dir
-
-triplemat
-dir
-
-palin
-dir
-
-sink
-dir
-
-waittest
-dir
-
-psort
-dir
-
-malloctest
-dir
-
-triplesort
-dir
-
-argtest
-dir
-
-exittest
-dir
-
-simpleforktest
-dir
-
-hog
-dir
-
-sty
-dir
-
-randcall
-dir
-
-dirconc
 dir
 
 f_test
@@ -110,28 +50,28 @@ dir
 farm
 dir
 
-sort
+kitchen
 dir
 
-add
+dirseek
+dir
+
+sort
 dir
 
 killtest
 dir
 
-crash
-dir
-
-bigfile
+triplemat
 dir
 
 forkbomb
 dir
 
-faulter
+palin
 dir
 
-bigexec
+psort
 dir
 
 tictac
@@ -140,15 +80,75 @@ dir
 triplehuge
 dir
 
+argtest
+dir
+
 conman
 dir
 
-rmdirtest
+hog
 dir
 
 rmtest
 dir
 
-dirtest
+sty
+dir
+
+filetest
+dir
+
+guzzle
+dir
+
+dirconc
+dir
+
+hash
+dir
+
+huge
+dir
+
+add
+dir
+
+tail
+dir
+
+parallelvm
+dir
+
+crash
+dir
+
+forktest
+dir
+
+bigfile
+dir
+
+faulter
+dir
+
+waittest
+dir
+
+sink
+dir
+
+bigexec
+dir
+
+triplesort
+dir
+
+malloctest
+dir
+
+exittest
+dir
+
+simpleforktest
 dir
 

@@ -84,5 +84,9 @@ int pid_sleep(pid_t t_pid);
 /* Signal a process out of sleep */
 int pid_wakeup(pid_t t_pid);
 
+int pid_valid(pid_t pid);
+
+bool pid_isparent(pid_t pid);
+
 
 #endif /* _PID_H_ */

@@ -3,6 +3,12 @@ svn:wc:ra_dav:version-url
 V 49
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/conf
 END
+conf.kern
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/conf/conf.kern
+END
 config
 K 25
 svn:wc:ra_dav:version-url
@@ -26,10 +32,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 60
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/conf/newvers.sh
-END
-conf.kern
-K 25
-svn:wc:ra_dav:version-url
-V 59
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/kern/conf/conf.kern
 END

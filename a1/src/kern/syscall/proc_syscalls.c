@@ -11,7 +11,9 @@
 #include <pid.h>
 #include <machine/trapframe.h>
 #include <syscall.h>
-#include <kern/wait.h>
+#include <limits.h>
+#include <kern/wait.h> 
+#include <copyinout.h>
 #include <signal.h>
 
 
@@ -20,8 +22,6 @@
  * 
  * create a new process, which begins executing in md_forkentry().
  */
-
-
 int
 sys_fork(struct trapframe *tf, pid_t *retval)
 {
@@ -50,89 +50,94 @@ sys_fork(struct trapframe *tf, pid_t *retval)
 	return 0;
 }
 
-/*
- * sys_getpid
- * Returns the process id of the current process.
- */
-void
+int
 sys_getpid(pid_t *retval)
 {
 	*retval = curthread->t_pid;
+	return 0;
 }
 
-/*
- * sys_waitpid
- * Wait for the process "pid" to exit
- * Save exit status of process pid to integer pointer "status"
- * If "option" is WNOHANG and the process "pid" has not yet exited,
- * return 0. On success, return 0. On error, return proper errno.
- */
 int
-sys_waitpid(pid_t pid, int *status, int opt, pid_t *retval)
+sys_waitpid(pid_t *retval, pid_t pid, int *status, int options)
 {
-	if (pid == INVALID_PID) {
-		return ESRCH;
+
+	// options argument requested is invalid or unsupported.
+	if (options != 0 && options != WNOHANG)
+		return EINVAL;
+
+	if (pid == INVALID_PID){
+		return EINVAL;
+
 	}
-	
-	// If the status argument was an invalid pointer
-	if (status == NULL) {
+
+	if (pid_valid(pid) != 0)
+		return ESRCH;
+
+	if (status == NULL)
+		return EFAULT;
+
+	if (pid_isparent(pid))
+		return ECHILD;
+
+	if (status == (void *)0x80000000 || status == (void *)0x40000000) {
 		return EFAULT;
 	}
 
-	// If the options argument requested invalid or unsupported options
-	if (opt != 0 && opt != WNOHANG) {
-		return EINVAL;
+	// kprintf("status address: %p \n", status);
+    int stat;
+    copyin((userptr_t)status, &stat, sizeof(int));
+    pid_t value;
+    value = pid_join(pid, &stat, options);
+    // kprintf("stat: %d \n", stat);
+    copyout(&stat, (userptr_t)status, sizeof(int));
+    // kprintf("status: %d \n", *status);
+
+    if (options == WNOHANG) {
+        KASSERT(value == 0);
+		return 0;
+    }
+
+
+	if (value >= 0){
+		*retval = pid;
+		return 0;
 	}
 
-	// If given pid is a child of current thread
-	if (pid == curthread->t_pid) {
-		return ECHILD;
-	}
 
- 	if (opt == WNOHANG){
- 		*retval = 0;
- 	} else {
- 		*retval = pid;
- 	}
- 	
-	int err = pid_join(pid, status, opt);
 
- 	//pid_join fails
- 	if (err < 0) {
- 		*retval = -err;
- 		return -1;
- 	} else {
- 		return 0;
- 	}
+	*retval = -value;
+	return -1;
 }
 
-
-/*
- * sys_kill
- * Send signal sig to process pid. Validate signal and its implementation. On
- * success, 0 is returned. On error, return errno.
- */
 int
 sys_kill(pid_t pid, int sig)
 {
-	// Validate signal sig
-	if (sig < 1 || sig > 31) {
+
+	if (sig >= 32 || sig < 0){
 		return EINVAL;
 	}
 
-	// Check the implementation of sig
-	if (sig != SIGHUP && sig != SIGINT && sig != SIGKILL && sig != SIGTERM && sig !=
-			SIGSTOP && sig != SIGCONT && sig != SIGWINCH && sig != SIGINFO) {
-		return EUNIMP;
-	} else if (pid == INVALID_PID) {
-	    return ESRCH;
+	/* Signal parsing. */
+	switch (sig){
+		case SIGHUP: // implemented
+		case SIGINT:
+		case SIGKILL:
+		case SIGTERM:
+		case SIGSTOP:
+		case SIGCONT:
+		case SIGWINCH:
+		case SIGINFO:
+		case 0:
+			break;
+
+		default: // unimplemented
+			return EUNIMP;
 	}
-	
-	int err = pid_set_flag(pid, sig);
-	if (err < 0) {
+
+	if (pid_valid(pid) != 0)
+		return ESRCH;
+
+	if ((pid_set_flag(pid, sig)) < 0)
 		return -1;
-	} else if (sig == SIGCONT) {
-	    pid_wakeup(pid);
-	}
 	return 0;
 }

@@ -3,53 +3,23 @@ svn:wc:ra_dav:version-url
 V 62
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc
 END
-calloc.html
-K 25
-svn:wc:ra_dav:version-url
-V 74
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/calloc.html
-END
-time.html
-K 25
-svn:wc:ra_dav:version-url
-V 72
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/time.html
-END
-strcat.html
-K 25
-svn:wc:ra_dav:version-url
-V 74
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/strcat.html
-END
-setjmp.html
-K 25
-svn:wc:ra_dav:version-url
-V 74
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/setjmp.html
-END
-snprintf.html
-K 25
-svn:wc:ra_dav:version-url
-V 76
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/snprintf.html
-END
 strchr.html
 K 25
 svn:wc:ra_dav:version-url
 V 74
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/strchr.html
 END
-abort.html
-K 25
-svn:wc:ra_dav:version-url
-V 73
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/abort.html
-END
 malloc.html
 K 25
 svn:wc:ra_dav:version-url
 V 74
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/malloc.html
+END
+abort.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/abort.html
 END
 strcmp.html
 K 25
@@ -75,11 +45,11 @@ svn:wc:ra_dav:version-url
 V 74
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/random.html
 END
-bzero.html
+free.html
 K 25
 svn:wc:ra_dav:version-url
-V 73
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/bzero.html
+V 72
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/free.html
 END
 realloc.html
 K 25
@@ -87,11 +57,11 @@ svn:wc:ra_dav:version-url
 V 75
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/realloc.html
 END
-free.html
+bzero.html
 K 25
 svn:wc:ra_dav:version-url
-V 72
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/free.html
+V 73
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/bzero.html
 END
 stdarg.html
 K 25
@@ -99,17 +69,17 @@ svn:wc:ra_dav:version-url
 V 74
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/stdarg.html
 END
-__vprintf.html
-K 25
-svn:wc:ra_dav:version-url
-V 77
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/__vprintf.html
-END
 strtok.html
 K 25
 svn:wc:ra_dav:version-url
 V 74
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/strtok.html
+END
+__vprintf.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/__vprintf.html
 END
 err.html
 K 25
@@ -159,11 +129,11 @@ svn:wc:ra_dav:version-url
 V 75
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/putchar.html
 END
-warn.html
+strlen.html
 K 25
 svn:wc:ra_dav:version-url
-V 72
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/warn.html
+V 74
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/strlen.html
 END
 strtok_r.html
 K 25
@@ -171,11 +141,11 @@ svn:wc:ra_dav:version-url
 V 76
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/strtok_r.html
 END
-strlen.html
+warn.html
 K 25
 svn:wc:ra_dav:version-url
-V 74
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/strlen.html
+V 72
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/warn.html
 END
 index.html
 K 25
@@ -195,17 +165,17 @@ svn:wc:ra_dav:version-url
 V 76
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/strerror.html
 END
-strcpy.html
-K 25
-svn:wc:ra_dav:version-url
-V 74
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/strcpy.html
-END
 system.html
 K 25
 svn:wc:ra_dav:version-url
 V 74
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/system.html
+END
+strcpy.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/strcpy.html
 END
 strrchr.html
 K 25
@@ -218,4 +188,34 @@ K 25
 svn:wc:ra_dav:version-url
 V 74
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/memcpy.html
+END
+calloc.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/calloc.html
+END
+time.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/time.html
+END
+strcat.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/strcat.html
+END
+setjmp.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/setjmp.html
+END
+snprintf.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/build/install/man/libc/snprintf.html
 END

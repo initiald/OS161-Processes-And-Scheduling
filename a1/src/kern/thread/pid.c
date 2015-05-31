@@ -42,7 +42,8 @@
 #include <current.h>
 #include <synch.h>
 #include <pid.h>
-#include <copyinout.h>
+#include <copyinout.h> 
+
 
 /*
  * Structure for holding PID and return data for a thread.
@@ -57,10 +58,7 @@ struct pidinfo {
 	volatile bool pi_exited;	// true if thread has exited
 	int pi_exitstatus;		// status (only valid if exited)
 	struct cv *pi_cv;		// use to wait for thread exit
-	volatile bool pi_detached; // a detached thread with no parent
-	int pi_flag;			// flag for signal
-	int num_threads_joined; // allows multiple threads to join in pid_join
-
+	int pi_flag;			// use to flag pid
 };
 
 
@@ -105,9 +103,6 @@ pidinfo_create(pid_t pid, pid_t ppid)
 	pi->pi_ppid = ppid;
 	pi->pi_exited = false;
 	pi->pi_exitstatus = 0xbaad;  /* Recognizably invalid value */
-	pi->pi_detached = false;
-	pi->pi_flag = 0;
-	pi->num_threads_joined = 0;
 
 	return pi;
 }
@@ -322,44 +317,50 @@ pid_unalloc(pid_t theirpid)
 int
 pid_detach(pid_t childpid)
 {
-	// Check is childpid is invalid
-	if (childpid == INVALID_PID || childpid == BOOTUP_PID) {
-		return EINVAL;
-	}
-
-	struct pidinfo *pi;
 	lock_acquire(pidlock);
-	pi = pi_get(childpid);
+	
+	struct pidinfo *childThread = pi_get(childpid);
 
-	// Check if the pid exists
-	if (pi == NULL) {
+	// ESRCH Error Checks
+
+	// No thread could be found corresponding to that specified by childpid.
+	if (childThread == NULL){
+		lock_release(pidlock);
 		return ESRCH;
 	}
-	// or if detached
-	if (pi->pi_detached) {
-		return EINVAL;
-	}
-	// or invalid
-	if (pi->pi_ppid == INVALID_PID) {
-		return EINVAL;
-	}
-	// or parent is not calling
-	if (curthread->t_pid != pi->pi_ppid) {
-		return EINVAL;
-	}
-	//or has existing joined threads
-	if (pi->num_threads_joined > 0) {
+
+	// EINVAL Error Checks
+
+	// Thread childpid is already in the detached state.
+	if (childThread->pi_ppid == INVALID_PID){
+		lock_release(pidlock);
 		return EINVAL;
 	}
 
-    // detach if not invalid
-	pi->pi_detached = true;
-	// check if child exited
-	if(pi->pi_exited) {
+	// Caller is not the parent of childpid.
+	if (childThread->pi_ppid != curthread->t_pid){
+		lock_release(pidlock);
+		return EINVAL;
+	}
+
+	// childpid is INVALID_PID or BOOTUP_PID.
+	if (childpid == INVALID_PID || childpid == BOOTUP_PID){
+		lock_release(pidlock);
+		return EINVAL;
+	}
+
+	
+
+	//if child has exited, free memeory for the struct
+	if (childThread->pi_exited == true){
 		pi_drop(childpid);
 	}
-
-	lock_release(pidlock);	
+	else{
+		// set child to detatched state
+		childThread->pi_ppid = INVALID_PID;
+	}
+	
+	lock_release(pidlock);
 	return 0;
 }
 
@@ -376,38 +377,34 @@ void
 pid_exit(int status, bool dodetach)
 {
 	struct pidinfo *my_pi;
-
+	
 	lock_acquire(pidlock);
 
-	/* get the pidinfo and set its exit status to true, and set the exit code */
 	my_pi = pi_get(curthread->t_pid);
 	KASSERT(my_pi != NULL);
+
+	// set exit status as status and set exited to true
 	my_pi->pi_exitstatus = status;
 	my_pi->pi_exited = true;
 
-	// Search through pids for the children and detach them
-	for (int i = 0; i < PROCS_MAX; i++) {
-		// check if child pid matches parent and not NULL
-		if (pidinfo[i] != NULL && pidinfo[i]->pi_ppid == curthread->t_pid) {
-			pidinfo[i]->pi_ppid = INVALID_PID; // disown the child
-			pidinfo[i]->pi_detached = dodetach; // detach the child
-			// drop child if exited
-			if (pidinfo[i]->pi_exited) {
-				pi_drop(pidinfo[i]->pi_pid);
+
+	// Wake up all threads waiting fot the current thread
+	cv_broadcast(my_pi->pi_cv, pidlock);
+
+	// Disown children of current thread
+	for(int index = PID_MIN; index <= PID_MAX; index++){
+		struct pidinfo *child = pi_get((pid_t)index);
+		if (child != NULL && child->pi_ppid == my_pi->pi_pid){
+			if (dodetach){
+				child->pi_ppid = INVALID_PID; //detatching child
+			} else {
+				child->pi_ppid = BOOTUP_PID; //disowning child
 			}
 		}
 	}
-
-	// if not invalid but detached, drop it
-	if (my_pi->pi_detached) {
-		my_pi->pi_ppid = INVALID_PID;
+	if (my_pi->pi_ppid == INVALID_PID) {
 		pi_drop(curthread->t_pid);
-	} else {
-		// if not detached, wake up waiting threads with signal
-		my_pi->pi_ppid = INVALID_PID;
-		cv_signal(my_pi->pi_cv, pidlock);
 	}
-
 	lock_release(pidlock);
 }
 
@@ -415,184 +412,130 @@ pid_exit(int status, bool dodetach)
  * pid_join - returns the exit status of the thread associated with
  * targetpid as soon as it is available. If the thread has not yet 
  * exited, curthread waits unless the flag WNOHANG is sent. 
- *`
+ *
  */
 int
 pid_join(pid_t targetpid, int *status, int flags)
 {
-	// Check is target pid is invalid
-	if(targetpid == INVALID_PID || targetpid == BOOTUP_PID) {
-		return -EINVAL;
-	}
 
-	struct pidinfo *pi;
 	lock_acquire(pidlock);
-	// get the target pidinfo
-	pi = pi_get(targetpid);
 
-	// check if target exists
-	if (pi == NULL) {
-		lock_release(pidlock);
-		return -ESRCH;
-	}
-	// or if deatched
-	if (pi->pi_detached) {
-		return -EINVAL;
-	}
-	// or if target is trying to join itself (deadlock)
-	if (pi->pi_pid == curthread->t_pid) {
+	// Create struct for new thread 
+	struct pidinfo *newThread = pi_get(targetpid);
+
+	// EDEADLK Error Check
+	if (targetpid == curthread->t_pid){
 		lock_release(pidlock);
 		return -EDEADLK;
 	}
-	// or if target already exited
-	if (pi->pi_exited) {
-	    // change status if necessary
-		if (status != NULL) {
-			*status = pi->pi_exitstatus;
-		}
-        // drop pidinfo and reduce number of joined threads
-		pi->num_threads_joined--;
-		// check for any more joined threads and drop when none left
-		if (!pi->num_threads_joined) {
-			pi_drop(targetpid);
-		}
-		lock_release(pidlock);
-		return curthread->t_pid;
-	} else {
-	    // deal with WNOHANG
-		if ((flags & WNOHANG) == WNOHANG) {
-			lock_release(pidlock);
-			return 0;
-		}
-		// increase joined threads since we wait
-		pi->num_threads_joined++;
-		cv_wait(pi->pi_cv, pidlock);
 
-        // change status if necessary
-		if (status != NULL) {
-			*status = pi->pi_exitstatus;
-		}
-        // drop pidinfo and reduce number of joined threads
-		pi->num_threads_joined--;
-		// check for any more joined threads and drop when none left
-		if (!pi->num_threads_joined) {
-			pi_drop(targetpid);
-		}
+	// ESRCH Error Check
+	if (newThread == NULL){
 		lock_release(pidlock);
-		return curthread->t_pid;
+		return -ESRCH;
 	}
+
+	// EINVAL Error Checks
+
+	if (newThread->pi_ppid == INVALID_PID){
+		lock_release(pidlock);
+		return -EINVAL;
+	}
+
+	if (targetpid == INVALID_PID || targetpid == BOOTUP_PID || targetpid < 0){
+		lock_release(pidlock);
+		return -EINVAL;
+	}
+
+	if (flags == WNOHANG){
+		lock_release(pidlock);
+		return 0;
+	}
+
+	if (newThread->pi_exited != true){
+		cv_wait(newThread->pi_cv, pidlock); 
+	}
+
+	int stat = newThread->pi_exitstatus;
+	// kprintf("stat: %d \n", stat);
+	if (newThread->pi_exited == true)
+		if (status != NULL){
+			*status = stat;
+			// kprintf("status: %d \n", *status);
+			// copyout(&stat, (userptr_t)status, sizeof(int));
+		}
+	
+	lock_release(pidlock);
+	return targetpid;
 }
 
-//additional monitoring tools for pid
-
-/*
- * pid_set_flag:
- * Set signal sig to process flag. On success, 0 is returned. On error,
- * return errno.
- */
 int
-pid_set_flag(pid_t t_pid, int flag){
-
+pid_set_flag(pid_t pid, int sig)
+{
 	lock_acquire(pidlock);
 
-    // check if valid pid
-	if (t_pid == INVALID_PID || t_pid > PID_MAX || t_pid < PID_MIN){
+	if (pid_valid(pid) != 0){
 		lock_release(pidlock);
 		return EINVAL;
 	}
+	
 
-    // get pidinfo
-	struct pidinfo* cur_info = pi_get(t_pid);
-	// check if pid exists
-	if (cur_info == NULL) {
+	struct pidinfo* pi = pi_get(pid);
+	if (pi == NULL){
 		lock_release(pidlock);
 		return ESRCH;
 	}
-    // set flag and return
-	cur_info->pi_flag = flag;
+
+	pi->pi_flag = sig;
+
 	lock_release(pidlock);
 	return 0;
 }
 
-/*
- * pid_get_flag: Return signal flag of the process specified by pid. On error,
- * a negative errno is returned.
- */
 int
-pid_get_flag(pid_t t_pid){
+pid_get_flag(pid_t pid)
+{
+
+	if (pid_valid(pid) != 0)
+		return EINVAL;
 
 	lock_acquire(pidlock);
-
-    // check if valid pid
-	if (t_pid == INVALID_PID || t_pid > PID_MAX || t_pid < PID_MIN){
-		lock_release(pidlock);
-		return EINVAL;
-	}
-
-    // get pidinfo
-	struct pidinfo* cur_info = pi_get(t_pid);
-	// check if pid exists
-	if (cur_info == NULL) {
+	struct pidinfo* pi = pi_get(pid);
+	if (pi == NULL){
 		lock_release(pidlock);
 		return ESRCH;
 	}
-    // set flag and return
-	int fvalue = cur_info->pi_flag;
+
+	int flag = pi->pi_flag;
+
 	lock_release(pidlock);
-	return fvalue;
+	return flag;
 }
 
-/*
- * Put a process into sleep state - waiting
- */
 int
-pid_sleep(pid_t t_pid){
-
-	lock_acquire(pidlock);
-
-	if (t_pid == INVALID_PID || t_pid > PID_MAX || t_pid < PID_MIN){
-		//check for invalid signal
-		lock_release(pidlock);
-		return EINVAL;
-	}
-
-	struct pidinfo* cur_info = pi_get(t_pid);
-
-	if (cur_info == NULL) {
-		//check if pid exist
-		lock_release(pidlock);
-		return ESRCH;
-	}
-
-	cv_wait(cur_info->pi_cv, pidlock);
-	lock_release(pidlock);
+pid_valid(pid_t pid)
+{
+	if (pid == INVALID_PID || pid < PID_MIN || pid > PID_MAX)
+    	return EINVAL;
 	return 0;
 }
 
-/*
- * Signal a process out of sleep
- */
-int
-pid_wakeup(pid_t t_pid){
-
+bool
+pid_isparent(pid_t pid)
+{
 	lock_acquire(pidlock);
-
-	if (t_pid == INVALID_PID || t_pid > PID_MAX || t_pid < PID_MIN){
-		//check for invalid signal
+	if (pid == INVALID_PID || pid < PID_MIN || pid > PID_MAX){
 		lock_release(pidlock);
-		return EINVAL;
-	}
+    	return EINVAL;
+    }
 
-	struct pidinfo* cur_info = pi_get(t_pid);
+    struct pidinfo* pi = pi_get(curthread->t_pid);
+    if (pi == NULL){
+    	lock_release(pidlock);
+        return ESRCH;
+    }
 
-	if (cur_info == NULL) {
-		//check if pid exist
-		lock_release(pidlock);
-		return ESRCH;
-	}
-
-	cv_signal(cur_info->pi_cv, pidlock);
 	lock_release(pidlock);
-	return 0;
+	return (pi->pi_ppid == pid);
 }
 

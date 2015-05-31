@@ -3,18 +3,6 @@ svn:wc:ra_dav:version-url
 V 56
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/user/include/sys
 END
-types.h
-K 25
-svn:wc:ra_dav:version-url
-V 64
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/include/sys/types.h
-END
-wait.h
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/include/sys/wait.h
-END
 ioctl.h
 K 25
 svn:wc:ra_dav:version-url
@@ -44,4 +32,16 @@ K 25
 svn:wc:ra_dav:version-url
 V 65
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/user/include/sys/endian.h
+END
+types.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/include/sys/types.h
+END
+wait.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/user/include/sys/wait.h
 END

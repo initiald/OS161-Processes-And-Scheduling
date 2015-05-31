@@ -3,12 +3,6 @@ svn:wc:ra_dav:version-url
 V 47
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/dev
 END
-random.html
-K 25
-svn:wc:ra_dav:version-url
-V 59
-/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/dev/random.html
-END
 emu.html
 K 25
 svn:wc:ra_dav:version-url
@@ -92,4 +86,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 57
 /svn/cscc69s15/group7/a1/!svn/ver/1/src/man/dev/beep.html
+END
+random.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/cscc69s15/group7/a1/!svn/ver/1/src/man/dev/random.html
 END
